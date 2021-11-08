@@ -1,0 +1,548 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Admin GTK - Store
+  </title>
+  <link rel="stylesheet" type="text/css" href="assets/css/font.css" />
+  	<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
+	<link rel="stylesheet" href="assets/fontawesome/css/all.css">
+  <link href="assets/css/material-dashboard.css" rel="stylesheet" />
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/fontawesome/header.css">
+</head>
+
+<body class="">
+ <!-- header -->
+<header>
+  <a href="./homepage.html" class="logo"><img src="assets/img/gtkstore.png" alt="er"></a>
+  <ul>
+    <li><a href="./homepage.html">Trang Chủ</a></li>
+    <li><div class="dropdown">
+      <button class="dropbtn">Sản Phẩm <img src="assets/img/down.png" width="15px" height="15px"></button>
+      <div class="dropdown-content">
+      <a href="./canon.html">Canon</a>
+      <a href="./sony.html">Sony</a>
+      <a href="./fujifilm.html">Fujifilm</a>
+      <a href="./nikon.html">Nikon</a>
+      </div>
+    </div></li>
+    <li><div class="dropdown-1">
+      <button class="dropbtn-1">Bán chạy <img src="assets/img/down.png" width="15px" height="15px"></button>
+      <div class="dropdown-content-1">
+      <ul class="list-img">
+        <li><a href="./sp1.html"><img src="assets/img/canon5.png" width="120px" height="auto" alt="er"></a></li>
+        <li><a href="./sp2.html"><img src="assets/img/fu2.jpg" width="120px" height="auto" alt="er"></a></li>
+        <li><a href="./sp3.html"><img src="assets/img/sony1.png" width="120px" height="auto"  alt="er"></a></li>
+        <li><a href="./sp4.html"><img src="assets/img/ni1.jpg" width="120px" height="auto"  alt="er"></a></li>
+      </ul>
+      <ul class="list-word">
+        <li class="list-word-a"><p>EOS 6D Mark II Kit</p></li>
+        <li class="list-word-a"><p>Fujifilm GFX 50S</p></li>
+        <li class="list-word-a"><p>APS-C E-mount cao <br> cấp α6600 </p></li>
+        <li class="list-word-a"><p>Nikon D5</p></li>
+      </ul>
+      </div>
+    </div></li>
+    <li><a href="./guarantee.html">Chính Sách Bảo Hành</a></li>
+    <li><a href="./introduce.html">Giới Thiệu</a></li> 
+    <div class = "cart">
+      <a href="./cart.html">
+        <span class="font"><img src="assets/img/bag.png" width="23px" height="23px"> Giỏ Hàng </span>
+      </a>
+    </div>
+    <div class = "signin">
+      <a href="./login.html">
+        <span class="font"><img src="assets/img/user.png" width="23px" height="23px"> Tài Khoản </span>
+        <div class="dropdown-content-2">
+          <a href="index.html">Đăng Xuất </a>
+          </div>
+      </a>
+    </div>
+  </ul>
+  <div class="search">   
+    <input type="text" class="search-txt" namr="" placeholder="Tìm Kiếm" id="text">
+      <a href="#" class="search-btn">
+        <img src="assets/img/search.png" width="23px" height="23px">
+      </a>
+  </div>
+</header>
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item  ">
+            <a class="nav-link" href="./dashboard.html">
+              <p>Quản Lí Sản Phẩm </p>
+            </a>
+          </li>
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./user.html">
+           
+              <p>Quản Lí Tài Khoản</p>
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a class="nav-link" href="./tables.html">
+           
+              <p>Danh Sách Đơn Hàng </p>
+            </a>
+          </li>
+          <li class="nav-item   ">
+            <a class="nav-link" href="./typography.html">
+         
+              <p>Thống Kê </p>
+            </a>
+          </li>
+     
+    
+ 
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <a class="navbar-brand" href="#">DANH SÁCH NGƯỜI DÙNG</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Tài Khoản</h4>
+                  <p class="card-category">Danh Sách Tài Khoản</p>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table">
+                      <thead class=" text-primary">
+                        <th>
+                          <a href="user1.html">STT <img src="assets/img/filter.png" width="18px" height="18px" alt=""></a>
+                        </th>
+                        <th>
+                          Tên Tài Khoản
+                        </th>
+                        <th>
+                          Mật Khẩu
+                        </th>
+                        <th>
+                          Trạng Thái
+                        </th>
+                        <th>
+                          Ngày Đăng Ký
+                        </th>
+                        <th>
+                          Ghi chú
+                        </th>
+                        <th>
+                          Khóa Tài Khoản
+                        </th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>
+                            1
+                          </td>
+                          <td>
+                            patuan0810@gmail.com
+                          </td>
+                          <td>
+                            *************
+                          </td>
+                          <td>
+                             Online
+                          </td>
+                          <td>
+                            10/11/2020
+                          </td>
+                          <td>
+                          V.I.P
+                          </td>
+                          <td >
+                            <div class="form-check" style="margin-left: 50px;">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="" checked>
+                                <span class="form-check-sign">
+                                <span class="check"></span>
+                                </span>
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            2
+                          </td>
+                          <td>
+                            thanhgiangdz@gmail.com
+                          </td>
+                          <td>
+                            **********
+                          </td>
+                          <td>
+                            Offline
+                          </td>
+                          <td>
+                            20/11/2020
+                          </td>
+                          <td>
+                            V.I.P
+                          </td>
+                          <td >
+                              <div class="form-check" style="margin-left: 50px;">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            3
+                          </td>
+                          <td>
+                            leduykhanhqn123@gmail.com
+                          </td>
+                          <td>
+                            ***********
+                          </td>
+                          <td>
+                            Online
+                          </td>
+                          <td>
+                            15/11/2020
+                          </td>
+                          <td>
+                          V.I.P
+                          </td>
+                          <td >
+                              <div class="form-check" style="margin-left: 50px;">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            4
+                          </td>
+                          <td>
+                           motthihai@gmail.com
+                          </td>
+                          <td>
+                            *********
+                          </td>
+                          <td>
+                            Offline
+                          </td>
+                          <td>
+                            26/11/2020
+                          </td>
+                          <td>
+                            None
+                          </td>
+                          <td >
+                              <div class="form-check" style="margin-left: 50px;">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            5
+                          </td>
+                          <td>
+                            haithiba@gmail.com
+                          </td>
+                          <td>
+                            ***********
+                          </td>
+                          <td>
+                            Offline
+                          </td>
+                          <td>
+                            05/08/2020
+                          </td>
+                          <td>
+                          None
+                          </td>
+                          <td >
+                              <div class="form-check" style="margin-left: 50px;">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" >
+                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                            
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            6
+                          </td>
+                          <td>
+                            bathibon@gmail.com
+                          </td>
+                          <td>
+                            *************
+                          </td>
+                          <td>  
+                            Offline
+                          </td>
+                          <td>
+                            10/10/2020
+                          </td> 
+                          <td>
+                            None
+                          </td>
+                          <td >
+                              <div class="form-check" style="margin-left: 50px;">
+                                  <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="" checked>
+                                    <span class="form-check-sign">
+                                    <span class="check"></span>
+                                    </span>
+                                  </label>
+                                </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <script src="assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+  <script src="assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+		<script>
+	$(document).ready(function(){
+        $('input[type="checkbox"]').click(function(){
+            if($(this).prop("checked") == true){
+                alert("Bạn Muốn Khóa Tài Khoản?");
+            }
+            else if($(this).prop("checked") == false){
+                alert("Bạn mở khóa tài khoản?");
+            }
+        });
+    });
+</script>
+</body>
+
+</html>

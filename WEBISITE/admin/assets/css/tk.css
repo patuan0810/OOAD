@@ -1,0 +1,60 @@
+h2
+{
+    position: absolute;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    margin-left: 610px;
+    margin-top: 115px;
+}
+/*phân trang*/
+.container {
+    width: 500px;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+  }
+  .pagination {
+    width: 400px;
+    margin-left: 50px;
+    padding: 0 0 50px 0;
+    position: absolute;
+    bottom: -5%;
+    left: 35%;
+  }
+  .pagination a {
+    border: 1px solid rgb(2, 82, 26);
+    margin-right: 5px;
+    display: block;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+  }
+   
+  .pagination a.active {
+      color: white;
+  }
+   
+  .pagination a:hover:not(.active) {
+    background-color: #ddd;
+  }
+.table
+{
+    /* float:left; */
+    padding-top: 180px;
+    width: 98%;
+    margin-left: 13px;
+    text-align: center;
+}
+.top
+{
+    border:  none;
+}
+.typography{
+    border-top: 0.02px solid white;
+}
+.table th{
+    border: 1px solid black;
+}
