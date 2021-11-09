@@ -125,3 +125,7 @@ color: rgb(225 102 21);
 .topnav a:hover {
     color: rgb(241, 144, 33);
 }
+.nav--hiden{
+    transform: translateY(calc(-1 * var(--nav-height)));
+    box-shadow: none;
+}
