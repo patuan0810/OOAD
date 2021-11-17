@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    justify-self: start;
+    align-self: start;
+}
+.slideshow-container {
+    text-align: center;  
+    padding: 5em;
+}
+.mySlides {
+    text-align: center;
+    margin: auto;
+}
+.mySlides img{
+    width: 800px;
+    height: 1000px;
+}
+.prev, .next {
+    cursor: pointer;
+    padding: 16px;
+    color: black;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    position: relative;
+    top: -180px;
+    margin-left: 149px;
+    margin-right: 149px;
+  }
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  .nut{
+    border: none;
+    position: relative;
+    text-overflow: ellipsis;
+    justify-content: center;
+    cursor: pointer;
+    height: 50px;
+    width: 400px;
+    margin-right: 15px;
+    padding: 0 .75rem;
+    font-size: 14px; 
+    background-color: rgb(188, 76, 42);
+  }
+  .nut span{  
+  font: inherit;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-box-direction: normal;
+  color:white;
+  }
+  .buynow{
+    position: relative;
+    margin-top: 15px;
+    text-overflow: ellipsis;
+    justify-content: center;
+    outline: 0;
+    cursor: pointer;
+    height: 50px;
+    width: 400px;
+    margin-right: 15px;
+    padding: 0 .75rem;
+    font-size: 14px;
+    background-color: black;
+    border: none;
+  }
+  .buynow span{
+    font: inherit;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 14px;
+    color:white;
+  }
+.gia{
+    position: absolute;
+    top: 80%;
+    left: 68%;
+    color: red;
+    font-size: 29px;
+  }
+.round-button{
+    text-align: center;
+}
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.dot:hover {
+    background-color: #ff6b15;
+}
+.text-right{
+    margin-top: 80px;
+}
+.text-right-1{
+    text-align: center;
+}
+.submit-btn-2{
+    width: 170px;
+    height: 50px;
+    color: rgb(188, 76, 42);
+    background: none;
+    border: 2px solid rgb(188, 76, 42);
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+  }

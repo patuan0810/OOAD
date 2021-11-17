@@ -1,11 +1,8 @@
 h2
 {
-    position: absolute;
     text-align: center;
     color: rgb(0, 0, 0);
     font-size: 2em;
-    margin-left: 610px;
-    margin-top: 115px;
 }
 /*phân trang*/
 .container {
@@ -42,10 +39,6 @@ h2
   }
 .table
 {
-    /* float:left; */
-    padding-top: 180px;
-    width: 98%;
-    margin-left: 13px;
     text-align: center;
 }
 .top

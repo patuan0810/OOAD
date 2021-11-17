@@ -1,78 +1,55 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>
     Admin GTK - Store
   </title>
-  <link rel="stylesheet" type="text/css" href="assets/css/font.css" />
-  	<link rel="stylesheet" href="assets/fontawesome/css/fontawesome.min.css">
-	<link rel="stylesheet" href="assets/fontawesome/css/all.css">
-  <link href="assets/css/material-dashboard.css" rel="stylesheet" />
-  <link href="assets/demo/demo.css" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/fontawesome/header.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font.css">
+  <link href="assets/css/material-dashboard.css" rel="stylesheet">
+  <link href="assets/demo/demo.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
 </head>
 
-<body class="">
+<body>
  <!-- header -->
-<header>
-  <a href="./homepage.html" class="logo"><img src="assets/img/gtkstore.png" alt="er"></a>
-  <ul>
-    <li><a href="./homepage.html">Trang Chủ</a></li>
-    <li><div class="dropdown">
-      <button class="dropbtn">Sản Phẩm <img src="assets/img/down.png" width="15px" height="15px"></button>
-      <div class="dropdown-content">
-      <a href="./canon.html">Canon</a>
-      <a href="./sony.html">Sony</a>
-      <a href="./fujifilm.html">Fujifilm</a>
-      <a href="./nikon.html">Nikon</a>
-      </div>
-    </div></li>
-    <li><div class="dropdown-1">
-      <button class="dropbtn-1">Bán chạy <img src="assets/img/down.png" width="15px" height="15px"></button>
-      <div class="dropdown-content-1">
-      <ul class="list-img">
-        <li><a href="./sp1.html"><img src="assets/img/canon5.png" width="120px" height="auto" alt="er"></a></li>
-        <li><a href="./sp2.html"><img src="assets/img/fu2.jpg" width="120px" height="auto" alt="er"></a></li>
-        <li><a href="./sp3.html"><img src="assets/img/sony1.png" width="120px" height="auto"  alt="er"></a></li>
-        <li><a href="./sp4.html"><img src="assets/img/ni1.jpg" width="120px" height="auto"  alt="er"></a></li>
-      </ul>
-      <ul class="list-word">
-        <li class="list-word-a"><p>EOS 6D Mark II Kit</p></li>
-        <li class="list-word-a"><p>Fujifilm GFX 50S</p></li>
-        <li class="list-word-a"><p>APS-C E-mount cao <br> cấp α6600 </p></li>
-        <li class="list-word-a"><p>Nikon D5</p></li>
-      </ul>
-      </div>
-    </div></li>
-    <li><a href="./guarantee.html">Chính Sách Bảo Hành</a></li>
-    <li><a href="./introduce.html">Giới Thiệu</a></li> 
-    <div class = "cart">
-      <a href="./cart.html">
-        <span class="font"><img src="assets/img/bag.png" width="23px" height="23px"> Giỏ Hàng </span>
-      </a>
-    </div>
-    <div class = "signin">
-      <a href="./login.html">
-        <span class="font"><img src="assets/img/user.png" width="23px" height="23px"> Tài Khoản </span>
-        <div class="dropdown-content-2">
-          <a href="index.html">Đăng Xuất </a>
+  <div class="header">
+    <div class="row">
+        <div id="header-top" class="Distance">
+          <div class="search">   
+            <input type="text" class="search-txt" namr="" placeholder="Tìm Kiếm" id="text">
+              <a href="#" class="search-btn">
+                <i class="fas fa-search" style="color: rgb(241, 144, 33); position: relative; left: -225px;"></i>
+              </a>
           </div>
-      </a>
-    </div>
-  </ul>
-  <div class="search">   
-    <input type="text" class="search-txt" namr="" placeholder="Tìm Kiếm" id="text">
-      <a href="#" class="search-btn">
-        <img src="assets/img/search.png" width="23px" height="23px">
-      </a>
+        </div>
+        <div id="header-top" class="Distance">
+         <a href="index.html" class="logo"><img src="../admin/assets/img/logo1.png" width="200px" height="100px" halt=""></a>
+        </div>
+        <div id="header-top" class="Distance">
+          <ul>
+            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a></li>
+            <li><a href="login.html"><i class="fas fa-user" style="margin-left: 40px"> Đăng nhập</i></a></li>
+            <li><a href="#"><i class="fas fa-cart-arrow-down"style="margin-left: 5px; margin-right:50px"> Giỏ hàng</i></a></li>
+          </ul>
+        </div>
   </div>
-</header>
+  <div class="topnav">
+    <ul>
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="../product.html">Sản Phẩm</a></li>
+      <li><a href="../guarantee.html">Bảo Hành</a></li>
+      <li><a href="../introduce.html">Giới Thiệu</a></li>
+    </ul>
+  </div> 
+  </div> 
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="sidebar-wrapper">
@@ -254,7 +231,7 @@
                             4
                           </td>
                           <td>
-                           motthihai@gmail.com
+                           anhpro6a5@gmail.com
                           </td>
                           <td>
                             *********
@@ -285,7 +262,7 @@
                             5
                           </td>
                           <td>
-                            haithiba@gmail.com
+                            trangquangminh@gmail.com
                           </td>
                           <td>
                             ***********
@@ -316,7 +293,7 @@
                             6
                           </td>
                           <td>
-                            bathibon@gmail.com
+                            koylazy@gmail.com
                           </td>
                           <td>
                             *************
