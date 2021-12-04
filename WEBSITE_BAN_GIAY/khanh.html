@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="css/khanh.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/54f0cbe4a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!-- header-->
+    <div class="header">
+        <div class="row">
+            <div id="header-top" class="Distance">
+              <div class="search">   
+                <input type="text" class="search-txt" namr="" placeholder="Tìm Kiếm" id="text">
+                  <a href="#" class="search-btn">
+                    <i class="fas fa-search" style="color: rgb(241, 144, 33); position: relative; left: -225px;"></i>
+                  </a>
+              </div>
+            </div>
+            <div id="header-top" class="Distance">
+             <a href="index.html" class="logo"><img src="Images/logo/logo1.png" width="200px" height="100px" halt=""></a>
+            </div>
+            <div id="header-top" class="Distance">
+              <ul>
+                <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a href="login.html"><i class="fas fa-user" style="margin-left: 40px"> Đăng nhập</i></a></li>
+                <li><a href="#"><i class="fas fa-cart-arrow-down"style="margin-left: 5px; margin-right:50px"><span class="cart-icon"> 0</span><sup>đ</sup></i></a></li>
+              </ul>
+            </div>
+      </div>
+      <div class="topnav">
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="product.html">Sản Phẩm</a></li>
+          <li><a href="guarantee.html">Bảo Hành</a></li>
+          <li><a href="introduce.html">Giới Thiệu</a></li>
+        </ul>
+      </div> 
+    </div> 
+<!-- body-->
+<section class = "products">
+  <div class = "container">
+      <div class = "product-items">
+          <!-- single product -->
+          <div class = "product">
+              <div class = "product-content">
+                  <div class = "product-img">
+                      <img class="imgpr" src = "Images/product/1.png" alt = "product image">
+                  </div>
+                      <button> Thêm vào giỏ</button>
+              </div>
+
+              <div class = "product-info">
+                  <div class = "product-info-top">
+                      <h2 class = "sm-title">Đánh Giá</h2>
+                      <div class = "rating">
+                          <span><i class = "fas fa-star"></i></span>
+                          <span><i class = "fas fa-star"></i></span>
+                          <span><i class = "fas fa-star"></i></span>
+                          <span><i class = "fas fa-star"></i></span>
+                          <span><i class = "far fa-star"></i></span>
+                      </div>
+                  </div>
+                  <a href = "#" class = "product-name"><h1>Nike Air For 1</h1></a>
+                  <p><span>600.000</span><sup>đ</sup></p>
+              </div>
+
+              <div class = "off-info">
+                  <h2 class = "sm-title">25% off</h2>
+              </div>
+          </div>
+              <div class = "off-info">
+                  <h2 class = "sm-title">25% off</h2>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+    <section class="cart">
+        <div class="cart-1">
+            <i class="fas fa-times"></i>
+            <h2>Giỏ Hàng Của Bạn</h2>
+        </div>
+        <form action="">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Chọn size</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Chọn</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--<tr>
+                        <td style="display: flex; align-items: center;"><img src="Images/logo/logo1.png" width="70px" alt="nike">Nike Air For 1</td>
+                        <td><select>
+                            <option>36</option>
+                            <option>37</option>
+                            <option>38</option>
+                            <option>39</option>
+                            <option>40</option>
+                            <option>41</option>
+                            <option>42</option>
+                            <option>43</option>
+                            <option>44</option>
+                            <option>45</option>
+                        </select></td>
+                        <td><p><span>300.000</span><sup>đ</sup></p></td>
+                        <td><input style="width: 40px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>
+                    <tr>
+                        <td style="display: flex; align-items: center;"><img src="Images/logo/logo1.png" width="70px" alt="nike">Nike Air For 2</td>
+                        <td><p><span>300.000</span><sup>đ</sup></p></td>
+                        <td><input style="width: 40px;outline: none;" type="number" value="1" min="1"></td>
+                        <td style="cursor: pointer;">Xóa</td>
+                    </tr>-->
+                </tbody>
+            </table>
+            <div style="text-align: right;" class="price-total">
+                <p style="font-weight: bold">Tổng tiền:<span> 0</span><sup>đ</sup></p>
+            </div>
+            <button>Thanh Toán</button>
+        </form>
+    </section>
+    <script src="js/cart.js"></script>
+</body>
+</html>

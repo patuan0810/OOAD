@@ -3,11 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-:root{
-    --white-light: rgba(255, 255, 255, 0.781);
-    --alice-blue: #f8f9fa;
-    --carribean-green: #40c9a2;
-    --gray: #ededed;
+.container{
+    max-width: 100%;
+    margin: auto;
 }
 .product-items{
     display: flex;
@@ -79,18 +77,4 @@
 }
 .cart button:hover{
     background-color: rosybrown;
-}/*
-.cart{
-    position: fixed;
-    height: 100vh;
-    width: 400px;
-    right: 0;
-    top: 0;
-    background-color: rgb(243, 243, 243) ;
-    padding: 12px 20px;
-    overflow-y: scroll;
-}
-.cart i{
-    cursor: pointer;
-    float: left;
 }

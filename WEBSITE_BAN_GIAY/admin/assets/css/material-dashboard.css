@@ -14482,7 +14482,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 
 .wrapper {
   position: relative;
-  top: -16px;
+  top: 0;
   height: 100vh;
 }
 
@@ -18730,9 +18730,7 @@ Copyright (c) 2015 Daniel Eden
   .dropdown-menu {
     display: none;
   }
-  .navbar-fixed-top {
-    -webkit-backface-visibility: hidden;
-  }
+
   #bodyClick {
     height: 100%;
     width: 100%;

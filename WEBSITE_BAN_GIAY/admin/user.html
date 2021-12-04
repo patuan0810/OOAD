@@ -16,40 +16,36 @@
 </head>
 
 <body>
- <!-- header -->
+<!-- header-->
   <div class="header">
-    <div class="row">
-        <div id="header-top" class="Distance">
-          <div class="search">   
-            <input type="text" class="search-txt" namr="" placeholder="Tìm Kiếm" id="text">
-              <a href="#" class="search-btn">
-                <i class="fas fa-search" style="color: rgb(241, 144, 33); position: relative; left: -225px;"></i>
-              </a>
+    <div class="row-1">
+      <div id="header-top" class="Distance">
+        <a href="index.html" class="logo"><img src="../admin/assets/img/logo1.png" width="200px" height="100px" halt=""></a>
+      </div>
+      <div id="header-top" class="Distance">
+        <ul>
+          <li><a href="index.html">Trang Chủ</a></li>
+          <li><a href="product.html">Sản Phẩm</a></li>
+          <li><a href="guarantee.html">Bảo Hành</a></li>
+          <li><a href="introduce.html">Giới Thiệu</a></li>
+        </ul>
+      </div>
+      <div id="header-top" class="Distance-1">
+        <ul>
+          <li><div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="search" id="mysearch">
           </div>
-        </div>
-        <div id="header-top" class="Distance">
-         <a href="index.html" class="logo"><img src="../admin/assets/img/logo1.png" width="200px" height="100px" halt=""></a>
-        </div>
-        <div id="header-top" class="Distance">
-          <ul>
-            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
-            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="https://www.pinterest.com/"><i class="fab fa-pinterest-p"></i></a></li>
-            <li><a href="login.html"><i class="fas fa-user" style="margin-left: 40px"> Đăng nhập</i></a></li>
-            <li><a href="#"><i class="fas fa-cart-arrow-down"style="margin-left: 5px; margin-right:50px"> Giỏ hàng</i></a></li>
-          </ul>
-        </div>
+          <span class="clear" onclick="docuemnt.getElementById('mysearch').value = ''"></span>
+          </div></li>
+          <li><a href="login.html"><i class="fas fa-user" ></i></a></li>
+          <li><a href="cart.html"><i class="fas fa-cart-arrow-down"><span class="cart-icon"> 0</span><sup>đ</sup></i></a></li>
+        </ul>
+      </div>
+    </div>
   </div>
-  <div class="topnav">
-    <ul>
-      <li><a href="index.html">Trang Chủ</a></li>
-      <li><a href="../product.html">Sản Phẩm</a></li>
-      <li><a href="../guarantee.html">Bảo Hành</a></li>
-      <li><a href="../introduce.html">Giới Thiệu</a></li>
-    </ul>
-  </div> 
-  </div> 
+<!--body-->
   <div class="wrapper ">
     <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
       <div class="sidebar-wrapper">
@@ -519,6 +515,13 @@
             }
         });
     });
+</script>
+<script>
+  const icon = document.querySelector('.icon');
+  const search = document.querySelector('.search');
+  icon.onclick = function(){
+      search.classList.toggle('active')
+  }
 </script>
 </body>
 
