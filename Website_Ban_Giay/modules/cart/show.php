@@ -50,7 +50,7 @@
                                         
                                     </td>
                                     <td class="column-2" ><?php echo $item['tensp']?></td>
-                                    <td class="column-3 " id="gia_<?php echo $item['id']; ?>" value="<?php echo $item['gia']?>">$<?php echo $item['gia']?></td>
+                                    <td class="column-3 " id="gia_<?php echo $item['id']; ?>" value="<?php echo $item['gia']?>"><?php echo number_format($item['gia'],0,",",".")?><sup>đ</sup></td>
                                     <td class="column-4">
                                         <!--  <div class="input-group btn-block">
                                             <span class="input-group-btn">
@@ -76,7 +76,7 @@
                                             // alert(sl);
                                             gia = $("#gia_"+id).html();
                                             total = sl * gia.slice(1, 10);
-                                            $('#total_'+id).html('$'+total);
+                                            $('#total_'+id).html(total+'<sup>đ</sup>');
                                             console.log(total)
                                             }
                                             
@@ -86,11 +86,11 @@
                                             sl --;
                                             gia = $("#gia_"+id).html();
                                             total = sl * gia.slice(1, 10);
-                                            $('#total_'+id).html('$'+total);
+                                            $('#total_'+id).html(total+'<sup>đ</sup>');
                                             }
                                         </script>
                                     </td>
-                                    <td class="column-5" id="total_<?php echo $item['id']; ?>">$<?php echo $item['sub_total']?> </td>
+                                    <td class="column-5" id="total_<?php echo $item['id']; ?>"><?php echo number_format($item['sub_total'],0,",",".")?><sup>đ</sup> </td>
                                 </tr>
                                 <?php
                                     }
@@ -160,7 +160,7 @@
                         Tổng Tiền Hàng:
                         </span>
                         <span class="m-text21 w-size20 w-full-sm">
-                        $ <?php echo get_total_cart(); ?>
+                        <?php echo get_total_cart(); ?><sup>đ</sup>
                         </span>
                     </div>
                     <!--  -->
@@ -206,7 +206,7 @@
                         Tổng Cộng:
                         </span>
                         <span class="m-text21 w-size20 w-full-sm">
-                        $ <?php echo get_total_cart(); ?>
+                        <?php echo get_total_cart(); ?><sup>đ</sup>
                         </span>
                     </div>
                     <?php

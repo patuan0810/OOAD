@@ -35,7 +35,7 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-shopping-cart fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge"><?php require '../db/connect.php';
+						<div style="font-size: 30px;" class="huge"><?php require '../db/connect.php';
 						$sql = "SELECT COUNT(*)as tongsanpham FROM `sanpham` WHERE 1";
 						$result = $conn->query($sql);
 						if($result->num_rows > 0)
@@ -124,7 +124,7 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
+						<div class="huge"><?php require '../db/connect.php';
 						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` where status=1";
 						$result = $conn->query($sql);
 						if($result->num_rows > 0)
@@ -135,9 +135,9 @@ require_once __DIR__. "/autoload/autoload.php";
 								}
 								else
 								{
-									echo $rows['tongtien'];
+									echo number_format($rows['tongtien'],0,",",".");
 								}
-						} ?></div>
+						} ?><sup style="text-transform:none">đ</sup></div>
 						<div>Tổng Tiền Hóa Đơn</div>
 					</div>
 				</div>
@@ -160,7 +160,7 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
+						<div class="huge"><?php require '../db/connect.php';
 						 $date = getdate();
 						 $day = $date['mday'];
 						 // echo $day;
@@ -174,10 +174,10 @@ require_once __DIR__. "/autoload/autoload.php";
 								}
 								else
 								{
-									echo $rows['tongtien'];
+									echo number_format($rows['tongtien'],0,",",".");
 								}
 								
-						} ?></div>
+						} ?><sup style="text-transform:none">đ</sup></div>
 						<div> Hóa Đơn Theo Ngày</div>
 					</div>
 				</div>
@@ -200,7 +200,7 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
+						<div class="huge"><?php require '../db/connect.php';
 						 $date = getdate();
 						 $mon = $date['mon'];
 						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE MONTH (created_at)=$mon  and status=1";
@@ -213,9 +213,9 @@ require_once __DIR__. "/autoload/autoload.php";
 								}
 								else
 								{
-									echo $rows['tongtien'];
+									echo number_format($rows['tongtien'],0,",",".");
 								}
-						} ?></div>
+						} ?><sup style="text-transform:none">đ</sup></div>
 						<div> Hóa Đơn Theo Tháng</div>
 					</div>
 				</div>
@@ -238,7 +238,7 @@ require_once __DIR__. "/autoload/autoload.php";
 						<i class="fa fa-support fa-5x"></i>
 					</div>
 					<div class="col-xs-9 text-right">
-						<div class="huge">$<?php require '../db/connect.php';
+						<div class="huge"><?php require '../db/connect.php';
 						 $date = getdate();
 						 $year = $date['year'];
 						$sql = "SELECT SUM(soluong*dongia)as tongtien FROM `cthoadon` WHERE YEAR (created_at)=$year  and status=1";
@@ -251,9 +251,9 @@ require_once __DIR__. "/autoload/autoload.php";
 								}
 								else
 								{
-									echo $rows['tongtien'];
+									echo number_format($rows['tongtien'],0,",",".");
 								}
-						} ?></div>
+						} ?><sup style="text-transform:none">đ</sup></div>
 						<div> Hóa Đơn Theo Năm</div>
 					</div>
 				</div>

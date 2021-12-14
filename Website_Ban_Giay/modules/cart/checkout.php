@@ -45,7 +45,7 @@
             <div class="col-md-6 p-b-30">
                 <div class="order-summary">
                     <div class="section-title left-aligned with-border">
-                        <h4 class="m-text26 p-b-36 p-t-15">Shopping cart</h4>
+                        <h4 class="m-text26 p-b-36 p-t-15">Giỏ Hàng</h4>
                     </div>
                     <?php
                         //Kiểm tra SESSION giỏ hàng có không, nếu có thì hiển thị form thanh toán,không thì thông báo giỏ hàng không có span
@@ -123,9 +123,9 @@
                             <thead>
                                 <tr>
                                     <!-- <td>Image</td> -->
-                                    <td>Product Name</td>
-                                    <td>Quantity</td>
-                                    <td>Unit Price</td>
+                                    <td>Tên Sản Phẩm</td>
+                                    <td>Số Lượng</td>
+                                    <td>Đơn Giá</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -144,7 +144,7 @@
                                         <a href="single-product.php?id=<?=$sp["id"]?>"><?php echo  $sp['tensp'] ?></a>
                                     </td>
                                     <td type="text"><?php echo  $sp['soluong'] ?></td>
-                                    <td type="text"><?php echo  $sp['gia'] ?></td>
+                                    <td type="text"><?php echo  number_format($sp['gia'],0,",",".") ?><sup>đ</sup></td>
                                 </tr>
                                 <?php
                                     }
@@ -156,12 +156,12 @@
                 <table class="table table-bordered" style="text-align: center">
                 <tbody>
                 <tr class="cart-subtotal">
-                <th>Subtotal</th>
-                <td class="text-center">  $ <?php echo get_total_cart(); ?></td>
+                <th>Tổng phụ</th>
+                <td class="text-center">  <?php echo get_total_cart(); ?><sup>đ</sup></td>
                 </tr>            
                 <tr class="order-total">
-                <th>Total</th>
-                <td class="text-center"><strong><span class="primary-color">  $ <?php echo get_total_cart(); ?></span></strong></td>
+                <th>Tổng</th>
+                <td class="text-center"><strong><span class="primary-color">  <?php echo get_total_cart(); ?><sup>đ</sup></span></strong></td>
                 </tr>
                 </tbody>
                 </table>
@@ -171,36 +171,33 @@
                 <!-- <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
                     Thanh Toán
                     </button> -->
-                <input type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" style="cursor: pointer" value="PLACE ORDER">
+                <input type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" style="cursor: pointer" value="Đặt Hàng">
                 </div>
             </div>
             <div class="col-md-6 p-b-30">
             <h4 class="m-text26 p-b-36 p-t-15">
-            Billing Details
+            Chi Tiết Thanh Toán
             </h4>
             <div class="bo4 of-hidden size15 m-b-20">
             <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="fullname" placeholder="<?php echo $list_user['name']?>" value="<?php echo $list_user['name']?>" class="form-control">
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="company" placeholder="Company" class="form-control" required>
-            </div>
-            <div class="bo4 of-hidden size15 m-b-20">
             <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="emailaddress" placeholder="<?php echo $list_user['email']?>" class="form-control" value="<?php echo $list_user['email']?>" required>
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="address" placeholder="Address"  class="form-control" required>
+            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="city" placeholder="Thành Phố" class="form-control" required>
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="city" placeholder="City" class="form-control" required>
+            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="district" placeholder="Quận/Huyện" class="form-control" required>
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="province" placeholder="Province" class="form-control" required>
+            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="commune" placeholder="Phường/Xã" class="form-control" required>
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="country" placeholder=" Country" class="form-control" required>
+            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="address" placeholder="Địa Chỉ"  class="form-control" required>
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
-            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" pattern="[0-9]{10}" name="telephone" placeholder="Phone" class="form-control"  required>
+            <input class="sizefull s-text7 p-l-22 p-r-22" type="text" pattern="[0-9]{10}" name="telephone" placeholder="Số Điện Thoại" class="form-control"  required>
             </div>
             </form>
             <?php
@@ -211,7 +208,7 @@
                 {
                 
                 ?>
-            <p> Cart has no product. Please <a href="?mod=product&act=main" style="color: red">return</a> to the shopping page.</p>
+            <p> Giỏ hàng không có sản phẩm. Xin vui lòng <a href="?mod=product&act=main" style="color: red">return</a> đến trang mua sắm.</p>
             <?php
                 }
                 ?>

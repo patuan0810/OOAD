@@ -223,7 +223,7 @@ $default_sorting=get_default();
 										</a>
 
 										<span class="block2-price m-text6 p-r-5">
-											$<?php echo $product['gia'] ?>
+											<?php echo number_format($product['gia'],0,",",".") ?><sup style="text-transform:none">đ</sup></li>
 										</span>
 									</div>
 								</div>

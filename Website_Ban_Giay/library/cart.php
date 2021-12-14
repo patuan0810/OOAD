@@ -73,7 +73,7 @@ function get_num_order_cart() { // lấy số lg
 
 function get_total_cart() { // lấy tổng tiền
 	if (isset($_SESSION['cart'])) {
-		return $_SESSION['cart']['info']['total'];
+		return number_format($_SESSION['cart']['info']['total'],0,",",".");
 	}
 	return FALSE;
 }

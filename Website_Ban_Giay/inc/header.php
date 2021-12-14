@@ -105,7 +105,7 @@
                         ?>
                         <div id="user-login">
                             <p>
-                                Hello <strong><?php if(is_login()) echo info_user('name'); ?></strong>
+                                Xin chào <strong><?php if(is_login()) echo info_user('name'); ?></strong>
                                 <!-- <span style="display: flex;justify-content: center;align-items: center;width: 16px;height: 16px;border-radius: 50%;background-color: #111111;color: white;font-family: Montserrat-Medium;font-size: 11px;position: absolute;top: 0;right: 50px;cursor: pointer;" onclick="logout()" >X</span> -->
                             </p>
                         </div>
@@ -183,7 +183,7 @@
                                         <?php echo $item['tensp']?>
                                     </a>
                                     <span class="header-cart-item-info">
-                                        <?php echo $item['soluong']; ?> x $<?php echo $item['gia']?>
+                                        <?php echo $item['soluong']; ?> x <?php echo number_format($item['gia'],0,",",".")?><sup>đ</sup>
                                     </span>
                                 </div>
                             </li>
@@ -197,7 +197,7 @@
                     ?>
                 </ul>
                 <div class="header-cart-total">
-                    Total: $ <?php echo get_total_cart(); ?>
+                    Tổng: <?php echo get_total_cart(); ?><sup>đ</sup>
                 </div>
                 <div class="header-cart-buttons">
                     <div class="header-cart-wrapbtn">
@@ -249,7 +249,7 @@
                 ?>
                 <div id="user-login">
                     <p>
-                        Hello <strong><?php if(is_login()) echo info_user('name'); ?></strong>
+                        Xin chào <strong><?php if(is_login()) echo info_user('name'); ?></strong>
                         <!-- <span style="display: flex;justify-content: center;align-items: center;width: 16px;height: 16px;border-radius: 50%;background-color: #111111;color: white;font-family: Montserrat-Medium;font-size: 11px;position: absolute;top: 0;right: 50px;cursor: pointer;" onclick="logout()" >X</span> -->
                     </p>
                 </div>
@@ -294,7 +294,7 @@
                                         <?php echo $item['tensp']?>
                                     </a>
                                     <span class="header-cart-item-info">
-                                        <?php echo $item['soluong']; ?> x $<?php echo $item['gia']?>
+                                        <?php echo $item['soluong']; ?> x <?php echo number_format($item['gia'],0,",",".")?><sup>đ</sup>
                                     </span>
                                 </div>
                             </li>
@@ -308,7 +308,7 @@
                   ?>
               </ul>
               <div class="header-cart-total">
-                Total: $ <?php echo get_total_cart(); ?>
+                Tổng:  <?php echo get_total_cart(); ?><sup>đ</sup>
             </div>
             <div class="header-cart-buttons">
                 <div class="header-cart-wrapbtn">

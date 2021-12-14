@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 20, 2021 at 11:31 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.1.30
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th12 14, 2021 lúc 12:10 PM
+-- Phiên bản máy phục vụ: 10.4.22-MariaDB
+-- Phiên bản PHP: 8.0.13
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `emmy`
+-- Cơ sở dữ liệu: `csdl_bangiay`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `baiviet`
+-- Cấu trúc bảng cho bảng `baiviet`
 --
 
 CREATE TABLE `baiviet` (
@@ -44,7 +43,7 @@ CREATE TABLE `baiviet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `baiviet`
+-- Đang đổ dữ liệu cho bảng `baiviet`
 --
 
 INSERT INTO `baiviet` (`id`, `tieude`, `noidung`, `hinhanh`, `iddm`, `keyword`, `nguoiviet`, `created`, `slug`, `created_at`, `updated_at`, `trangthai`) VALUES
@@ -56,7 +55,7 @@ INSERT INTO `baiviet` (`id`, `tieude`, `noidung`, `hinhanh`, `iddm`, `keyword`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `cthoadon`
+-- Cấu trúc bảng cho bảng `cthoadon`
 --
 
 CREATE TABLE `cthoadon` (
@@ -71,26 +70,26 @@ CREATE TABLE `cthoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `cthoadon`
+-- Đang đổ dữ liệu cho bảng `cthoadon`
 --
 
 INSERT INTO `cthoadon` (`id`, `ma_HD`, `ma_SP`, `soluong`, `dongia`, `status`, `created_at`, `updated_at`) VALUES
-(99, 81, 68, 1, 5990, 0, '2021-10-20 09:29:48', '2021-10-20 09:29:48'),
-(101, 83, 50, 1, 59, 0, '2021-10-20 09:29:52', '2021-10-20 09:29:52'),
-(102, 83, 4, 1, 700, 0, '2021-10-20 09:29:52', '2021-10-20 09:29:52'),
-(125, 94, 11, 1, 700, 1, '2021-07-07 19:17:36', '2021-07-07 19:17:36'),
-(126, 98, 62, 1, 500, 1, '2021-07-08 02:33:45', '2021-07-08 02:33:45'),
-(127, 98, 63, 5, 400, 1, '2021-07-08 02:33:45', '2021-07-08 02:33:45'),
-(129, 100, 79, 8, 40, 1, '2021-08-09 15:00:04', '2021-08-09 15:00:04'),
-(132, 102, 63, 1, 400, 2, '2021-07-19 14:56:39', '2021-07-19 14:56:39'),
-(133, 103, 18, 1, 30, 2, '2021-07-19 14:58:31', '2021-07-19 14:58:31'),
-(134, 103, 79, 1, 40, 2, '2021-07-19 14:58:31', '2021-07-19 14:58:31'),
-(135, 104, 18, 1, 30, 2, '2021-07-19 15:00:17', '2021-07-19 15:00:17');
+(99, 81, 68, 1, 137770000, 0, '2021-12-14 10:07:47', '2021-12-14 10:07:47'),
+(101, 83, 50, 1, 1357000, 0, '2021-12-14 10:08:02', '2021-12-14 10:08:02'),
+(102, 83, 4, 1, 16100000, 0, '2021-12-14 10:08:29', '2021-12-14 10:08:29'),
+(125, 94, 11, 1, 16100000, 1, '2021-12-14 10:08:31', '2021-12-14 10:08:31'),
+(126, 98, 62, 1, 11500000, 1, '2021-12-14 10:08:49', '2021-12-14 10:08:49'),
+(127, 98, 63, 5, 9200000, 1, '2021-12-14 10:08:53', '2021-12-14 10:08:53'),
+(129, 100, 79, 8, 920000, 1, '2021-12-14 10:09:17', '2021-12-14 10:09:17'),
+(132, 102, 63, 1, 9200000, 2, '2021-12-14 10:08:55', '2021-12-14 10:08:55'),
+(133, 103, 18, 1, 690, 2, '2021-12-14 10:09:31', '2021-12-14 10:09:31'),
+(134, 103, 79, 1, 920000, 2, '2021-12-14 10:09:22', '2021-12-14 10:09:22'),
+(135, 104, 18, 1, 690, 2, '2021-12-14 10:09:34', '2021-12-14 10:09:34');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `default_sorting`
+-- Cấu trúc bảng cho bảng `default_sorting`
 --
 
 CREATE TABLE `default_sorting` (
@@ -100,18 +99,18 @@ CREATE TABLE `default_sorting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `default_sorting`
+-- Đang đổ dữ liệu cho bảng `default_sorting`
 --
 
 INSERT INTO `default_sorting` (`id`, `ten`, `status`) VALUES
-(1, 'New Products', 1),
-(2, 'Price: low to high', 1),
-(3, 'Price: high to low', 1);
+(1, 'Sản Phẩm Mới', 1),
+(2, 'Giá: thấp đến cao', 1),
+(3, 'Giá: cao đến thấp', 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dmbaiviet`
+-- Cấu trúc bảng cho bảng `dmbaiviet`
 --
 
 CREATE TABLE `dmbaiviet` (
@@ -124,21 +123,21 @@ CREATE TABLE `dmbaiviet` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `dmbaiviet`
+-- Đang đổ dữ liệu cho bảng `dmbaiviet`
 --
 
 INSERT INTO `dmbaiviet` (`id_dm`, `tendm`, `slug`, `trangthai`, `created_at`, `updated_at`) VALUES
-(1, 'Review', NULL, 1, '2021-06-22 01:12:12', '2021-10-17 17:12:07'),
-(2, 'Trademark', NULL, 1, '2021-06-22 01:12:12', '2021-10-17 17:12:07'),
-(3, 'Tips', NULL, 1, '2021-06-22 01:12:12', '2021-06-28 18:49:15'),
+(1, 'Review', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:47'),
+(2, 'Trademark', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:47'),
+(3, 'Tips', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:48'),
 (4, 'Entertainment', NULL, 1, '2021-06-22 01:12:12', '2021-06-29 15:54:08'),
 (6, 'Fashions', NULL, 1, '2021-06-22 01:12:12', '2021-06-30 08:11:37'),
-(7, 'Trẻ trung ', 'tre-trung', 0, '2021-06-22 01:33:20', '2021-06-28 20:49:18');
+(7, 'Trẻ trung ', 'tre-trung', 1, '2021-06-22 01:33:20', '2021-12-12 11:14:09');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hinhanh`
+-- Cấu trúc bảng cho bảng `hinhanh`
 --
 
 CREATE TABLE `hinhanh` (
@@ -151,7 +150,7 @@ CREATE TABLE `hinhanh` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `hinhanh`
+-- Đang đổ dữ liệu cho bảng `hinhanh`
 --
 
 INSERT INTO `hinhanh` (`hinhspID`, `hinhID`, `duongdan`, `status`, `created_at`, `updated_at`) VALUES
@@ -470,13 +469,12 @@ INSERT INTO `hinhanh` (`hinhspID`, `hinhID`, `duongdan`, `status`, `created_at`,
 (79, 315, 'SK8-HI MICKEY & MINNIE 4.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04'),
 (80, 316, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04'),
 (80, 317, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED 1.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04'),
-(80, 318, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED 2.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04'),
-(80, 319, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED 3.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04');
+(80, 318, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED 2.jpg', 1, '2021-06-27 09:10:04', '2021-06-27 09:10:04');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `hoadon`
+-- Cấu trúc bảng cho bảng `hoadon`
 --
 
 CREATE TABLE `hoadon` (
@@ -493,7 +491,7 @@ CREATE TABLE `hoadon` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `hoadon`
+-- Đang đổ dữ liệu cho bảng `hoadon`
 --
 
 INSERT INTO `hoadon` (`maHD`, `company`, `address`, `city`, `province`, `country`, `telephone`, `ngaylap`, `status`, `id_user`) VALUES
@@ -509,7 +507,7 @@ INSERT INTO `hoadon` (`maHD`, `company`, `address`, `city`, `province`, `country
 -- --------------------------------------------------------
 
 --
--- Table structure for table `loaisanpham`
+-- Cấu trúc bảng cho bảng `loaisanpham`
 --
 
 CREATE TABLE `loaisanpham` (
@@ -523,7 +521,7 @@ CREATE TABLE `loaisanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `loaisanpham`
+-- Đang đổ dữ liệu cho bảng `loaisanpham`
 --
 
 INSERT INTO `loaisanpham` (`id_loai`, `loaisanpham`, `hinh_tieu_de`, `slug`, `trangthai`, `created_at`, `updated_at`) VALUES
@@ -532,12 +530,12 @@ INSERT INTO `loaisanpham` (`id_loai`, `loaisanpham`, `hinh_tieu_de`, `slug`, `tr
 (3, 'BALENCIAGA', '7a85dc143a40a5e5039f1ff78a859f56.jpg', 'balenciaga', 1, '2021-06-18 11:27:20', '2021-07-28 03:31:46'),
 (4, 'CONVERSE', '8d4f2274cc0efcdc00d69d18bc88f3e0.jpg', 'converse', 1, '2021-06-18 11:27:20', '2021-06-21 07:53:29'),
 (5, 'VANS', '4a6a2be0695c4542f3f91a248c2df922.jpg', 'vans', 1, '2021-06-18 11:27:20', '2021-06-21 07:53:32'),
-(23, 'NEW BALANCE', '', 'new-balance', 0, '2021-06-19 07:07:02', '2021-06-26 06:45:51');
+(23, 'NEW BALANCE', '', 'new-balance', 1, '2021-06-19 07:07:02', '2021-12-12 11:06:02');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `sanpham`
+-- Cấu trúc bảng cho bảng `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -556,94 +554,94 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `sanpham`
+-- Đang đổ dữ liệu cho bảng `sanpham`
 --
 
 INSERT INTO `sanpham` (`id`, `tensp`, `maloai`, `hinhanh`, `motangan`, `motadai`, `gia`, `soluong`, `trangthai`, `slug`, `created_at`, `updated_at`) VALUES
-(2, 'ADIDAS  EQT SUPPORT HIGHS AND LOWS', 1, 'EQT SUPPORT ADV HAL HIGHS AND LOWS.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 350, 50, 1, 'adidas-eqt-support-highs-and-lows', NULL, '2021-07-28 03:31:44'),
-(3, 'ADIDAS  FALCON W', 1, 'FALCON W.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, 'adidas-falcon-w', NULL, '2021-07-28 03:31:44'),
-(4, 'ADIDAS  GAZELLE W', 1, 'GAZELLE W.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 700, 36, 1, 'adidas-gazelle-w', '2021-07-06 17:00:00', '2021-07-28 03:31:44'),
-(5, 'ADIDAS  NMD HUMAN RACE TRAIL SOLAR PACK', 1, 'NMD HUMAN RACE TRAIL SOLAR PACK.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 560, 50, 1, 'adidas-nmd-human-race-trail-solar-pack', NULL, '2021-07-28 03:31:44'),
-(6, 'ADIDAS  NMD R1 JAPAN', 1, 'NMD R1 JAPAN.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, 'adidas-nmd-r1-japan', NULL, '2021-07-28 03:31:44'),
-(7, 'ADIDAS  NMD R1 PK', 1, 'NMD R1 PK.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 40, 50, 1, 'adidas-nmd-r1-pk', NULL, '2021-07-28 03:31:44'),
-(8, 'ADIDAS  NMD R1 PK OG 2017 RELEASE', 1, 'NMD R1 PK OG 2017 RELEASE.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 50, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(9, 'ADIDAS  NMD R1 W 1', 1, 'NMD R1 W 1.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 400, 50, 1, 'adidas-nmd-r1-w-1', NULL, '2021-07-28 03:31:44'),
-(10, 'ADIDAS  PW HU HOLI NMD MC TIE DYE', 1, 'PW HU HOLI NMD MC TIE DYE.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 500, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(11, 'ADIDAS PW HUMAN RACE NMD TR PHARRELL', 1, 'PW HUMAN RACE NMD TR PHARRELL.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 700, 48, 1, NULL, '2021-07-05 17:00:00', '2021-07-28 03:31:44'),
-(12, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACK', 1, 'PW SOLAR HU NMD INSPIRATION PACK.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 800, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(13, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKS', 1, 'PW SOLAR HU NMD INSPIRATION PACKS.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 550, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(14, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKSS', 1, 'PW SOLAR HU NMD INSPIRATION PACKSS.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 900, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(15, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKS', 1, 'PW SOLAR HU NMD INSPIRATION PACKS.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 550, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(16, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKSS', 1, 'PW SOLAR HU NMD INSPIRATION PACKSS.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 900, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(17, 'ADIDAS PW TENNIS HU', 1, 'PW TENNIS HU.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(18, 'ADIDAS RISINGSYARXR1', 1, 'RISINGSYARXR1.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 30, 50, 1, NULL, '2021-07-05 17:00:00', '2021-07-28 03:31:44'),
-(19, 'ADIDAS SUPERSTAR', 1, 'SUPERSTAR.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 700, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(20, 'ADIDAS ULTRA BOOST', 1, 'ULTRA BOOST.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(21, 'ADIDAS ULTRABOOST WHITE MULTICOLOR', 1, 'ULTRABOOST WHITE MULTICOLOR.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 500, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(22, 'ADIDAS YEEZY BOOST 700 ANALOG', 1, 'YEEZY BOOST 700 ANALOG.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 4500, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(23, 'ADIDAS YEEZY BOOST 700 INERTIA', 1, 'YEEZY BOOST 700 INERTIA.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(24, 'ADIDAS YEEZY BOOST 700 V2 GEODE', 1, 'YEEZY BOOST 700 V2 GEODE.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 600, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(25, 'ADIDAS YEEZY BOOST 700 INERTIA', 1, 'YEEZY BOOST 700 INERTIA.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 200, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(26, 'ADIDAS YEEZY BOOST 700 V2 GEODE', 1, 'YEEZY BOOST 700 V2 GEODE.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 600, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(27, 'ADIDAS YEEZY BOOST 700 WAVE RUNNER', 1, 'YEEZY BOOST 700 WAVE RUNNER.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 3000, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(28, 'ADIDAS YEEZY DESERT BOOT ROCK', 1, 'YEEZY DESERT BOOT ROCK.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 5410, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(29, 'ADIDAS YEEZY POWERPHASE CALABASAS GREY', 1, 'YEEZY POWERPHASE CALABASAS GREY.jpg', 'Streamlined and modern, these NMD shoes combine \'80s racing heritage with style cues taken from outdoor trail gear. The foot-hugging knit upper rides on a responsive cushioned midsole. ', 'Adidas currently manufactures several running and lifestyle shoes, including the Energy-boost, and the spring-blade trainers. I The brand has built a strong runners\' network within big European capitals, such as Paris\' \'Boost Energy League\'. ... adidas EQT is a style of sneakers from adidas.', 7800, 50, 1, NULL, NULL, '2021-07-28 03:31:44'),
-(30, 'AIR JORDAN 1 HIGH OG TS SP TRAVIS SCOTT', 2, 'AIR JORDAN 1 HIGH OG TS SP TRAVIS SCOTT.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 900, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(31, 'AIR JORDAN 1 LOW BLACK TOE', 2, 'AIR JORDAN 1 LOW BLACK TOE.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 1050, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(32, 'AIR JORDAN 1 RETRO HIGH BG', 2, 'AIR JORDAN 1 RETRO HIGH BG.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 600, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(33, 'AIR JORDAN 1 RETRO HIGH OG GS CRIMSON TINT', 2, 'AIR JORDAN 1 RETRO HIGH OG GS CRIMSON TINT.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 450, 50, 1, 'air-jordan-1-retro-high-og-gs-crimson-tint', NULL, '2021-06-30 03:41:34'),
-(34, 'AIR JORDAN 1 RETRO HIGH OG TURBO GREEN', 2, 'AIR JORDAN 1 RETRO HIGH OG TURBO GREEN.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 460, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(35, 'AIR JORDAN 2 RETRO HISTORY OF FLIGHT', 2, 'AIR JORDAN 2 RETRO HISTORY OF FLIGHT.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 700, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(36, 'AIR JORDAN 9 RETRO GS DB SAMPLE', 2, 'AIR JORDAN 9 RETRO GS DB SAMPLE.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 450, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(37, 'AIR JORDAN 12 RETRO WINGS (NO LIMIT NUMBER)', 2, 'AIR JORDAN 12 RETRO WINGS (NO LIMIT NUMBER).jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 8000, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(38, 'JORDAN TRUNNER SMASH', 2, 'JORDAN TRUNNER SMASH.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 6000, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(40, 'AIR JORDAN 13 PROMO RAY ALLEN PE', 2, 'AIR JORDAN 13 PROMO RAY ALLEN PE.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 2500, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(41, 'AIR JORDAN 28 PE RAY ALLEN FINALS AWAY', 2, 'AIR JORDAN 28 PE RAY ALLEN FINALS AWAY.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 3000, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(42, 'AIR JORDAN AIR JORDAN 4 RETRO OG BRED 2021 BRED', 2, 'AIR JORDAN AIR JORDAN 4 RETRO OG BRED 2021 BRED.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 3120, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(43, 'JORDAN RARE AIR TURBO GREEN', 2, 'JORDAN RARE AIR TURBO GREEN.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 950, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(44, 'JORDAN TRUNNER SMASH', 2, 'JORDAN TRUNNER SMASH.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 5000, 50, 1, NULL, NULL, '2021-06-30 03:41:34'),
-(45, 'CONVERSE CHUCK 70 HIGH CHINESE NEW YEAR CHINESE NEW YEAR PATCHWORK', 4, 'CHUCK 70 HIGH CHINESE NEW YEAR CHINESE NEW YEAR PATCHWORK.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 49, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(46, 'CONVERSE CHUCK 70 HIGH TOP TOY', 4, 'CHUCK 70 HIGH TOP TOY.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 59, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(47, 'CONVERSE CHUCK 70 LOW MULTI HEART', 4, 'CHUCK 70 LOW MULTI HEART.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 49, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(48, 'CONVERSE CHUCK TAYLOR ALL STAR 70 OX BIG FISH THEORY', 4, 'CHUCK TAYLOR ALL STAR 70 OX BIG FISH THEORY.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 69, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(49, 'CONVERSE CHUCK TAYLOR ALL STAR HI TOP LEATHER', 4, 'CHUCK TAYLOR ALL STAR HI TOP LEATHER.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 109, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(50, 'CONVERSE CHUCK TAYLOR ALL STAR HIGH', 4, 'CHUCK TAYLOR ALL STAR HIGH.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 59, 45, 1, NULL, '2021-06-27 17:00:00', '2021-07-07 19:35:59'),
-(51, 'CONVERSE CHUCK TAYLOR ALL STAR LOW', 4, 'CHUCK TAYLOR ALL STAR LOW.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 49, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(52, 'CONVERSE CHUCK TAYLOR ALL STAR WATERPROOF HIGH', 4, 'CHUCK TAYLOR ALL STAR WATERPROOF HIGH.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 200, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(53, 'CONVERSE CHUCK TAYLOR NOT A CHUCK SAMPLE', 4, 'CHUCK TAYLOR NOT A CHUCK SAMPLE.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 300, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(54, 'CONVERSE CHUCK TAYLOR NOT A CHUCK SAMPLES', 4, 'CHUCK TAYLOR NOT A CHUCK SAMPLES.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 500, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(55, 'CONVERSE CHUCK TAYLOR ALL-STAR 70S HI COMME DES GARCONS', 4, 'CONVERSE CHUCK TAYLOR ALL-STAR 70S HI COMME DES GARCONS.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 200, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(56, 'CONVERSE PRO LEATHER 76', 4, 'CONVERSE PRO LEATHER 76.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 49, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(57, 'CONVERSE CTAS HI', 4, 'CTAS HI.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 100, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(58, 'CONVERSE FEAR OF GOD CHUCK 70 HI  ESSENTIALS', 4, 'FEAR OF GOD CHUCK 70 HI  ESSENTIALS.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 79, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(59, 'CONVERSE ONE STAR OX', 4, 'ONE STAR OX.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 59, 50, 1, NULL, '2021-06-26 17:00:00', '2021-06-30 03:52:26'),
-(60, 'CONVERSE ONE STAR OX UNDEFEATED', 4, 'ONE STAR OX UNDEFEATED.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 99, 50, 1, NULL, NULL, '2021-06-30 03:49:46'),
-(61, 'CONVERSE STAR PLAYER OX', 4, 'STAR PLAYER OX.jpg', 'Look effortlessly cool in these iconic sneakers featuring an easy, slip-on closure.', 'Marquis Mills Converse founded the Converse Rubber Shoe Company in 1908 in Malden, Massachusetts. In 1917 the company designed the forerunner of the modern All Star shoe that it marketed under the name of \'Non-Skids.\' The shoe was composed of a rubber sole and canvas upper and was designed for basketball players.', 1000, 50, 1, NULL, '2021-06-26 17:00:00', '2021-06-30 03:52:56'),
-(62, 'BALENCIAGA SPEED TRAINER', 3, 'BALENCIAGA SPEED TRAINER.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 500, 46, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(63, 'BALENCIAGA SPEED TRAINERS', 3, 'BALENCIAGA SPEED TRAINERS.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 400, 37, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(64, 'BALENCIAGA TRIPLE S SPLIT', 3, 'BALENCIAGA TRIPLE S SPLIT.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 700, 50, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(65, 'TRIPLE S PINK', 3, 'TRIPLE S PINK.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 800, 50, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(66, 'TRIPLE S SUEDE WHITE', 3, 'TRIPLE S SUEDE WHITE.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 560, 50, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(67, 'TRIPLE S TRAINER', 3, 'TRIPLE S TRAINER.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 200, 50, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(68, 'TRIPLE S TRIPLE S', 3, 'TRIPLE S TRIPLE S.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 5990, 45, 1, NULL, '2021-07-06 17:00:00', '2021-07-28 03:31:46'),
-(69, 'TRIPLE SS', 3, 'TRIPLE SS.jpg', 'Balenciaga\'s coveted Triple S sneakers are re-imagined for the new season in a red and gray colourway. Crafted with a mesh core paneled with brown nubuck and black leather, they\'re constructed on the label\'s distinctive articulated layered rubber soles. T', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 300, 50, 1, NULL, NULL, '2021-07-28 03:31:46'),
-(70, 'VANS AUTHENTIC 44 DX', 5, 'AUTHENTIC 44 DX.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 600, 50, 1, NULL, NULL, '2021-07-07 18:25:33'),
-(71, 'VANS CLASSIC SLIP ON SKULL', 5, 'CLASSIC SLIP ON SKULL.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 46, 50, 1, NULL, NULL, '2021-07-07 18:25:37'),
-(72, 'VANS COMFYCUSH OLD SKOOL DEFCON X LBT', 5, 'COMFYCUSH OLD SKOOL DEFCON X LBT.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 600, 50, 1, NULL, NULL, '2021-07-07 18:25:40'),
-(73, 'VANS COMFYCUSH SK8-HI DEFCON X LBT', 5, 'COMFYCUSH SK8-HI DEFCON X LBT.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 500, 50, 1, NULL, NULL, '2021-07-07 18:25:44'),
-(74, 'VANS DAVID BOWIE X SK8-HI ZIP TODDLER BOWIE', 5, 'DAVID BOWIE X SK8-HI ZIP TODDLER BOWIE.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 300, 50, 1, NULL, NULL, '2021-07-07 18:25:47'),
-(75, 'VANS LAMPIN CHALK PINK', 5, 'LAMPIN CHALK PINK.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 99, 43, 1, NULL, NULL, '2021-07-07 18:25:50'),
-(76, 'VANS OF FUL CAB LX', 5, 'OF FUL CAB LX.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 56, 50, 1, NULL, NULL, '2021-07-07 18:25:54'),
-(77, 'VANS OLD SCHOOL DAVID BOWIE', 5, 'OLD SCHOOL DAVID BOWIE.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 56, 40, 1, NULL, NULL, '2021-07-07 18:25:57');
+(2, 'ADIDAS  EQT SUPPORT HIGHS AND LOWS', 1, 'EQT SUPPORT ADV HAL HIGHS AND LOWS.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 1840000, 50, 1, 'adidas-eqt-support-highs-and-lows', NULL, '2021-12-14 08:44:51'),
+(3, 'ADIDAS  FALCON W', 1, 'FALCON W.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, 'adidas-falcon-w', NULL, '2021-12-14 08:44:27'),
+(4, 'ADIDAS  GAZELLE W', 1, 'GAZELLE W.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 16100000, 36, 1, 'adidas-gazelle-w', '2021-07-06 17:00:00', '2021-12-14 08:44:27'),
+(5, 'ADIDAS  NMD HUMAN RACE TRAIL SOLAR PACK', 1, 'NMD HUMAN RACE TRAIL SOLAR PACK.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 12880000, 50, 1, 'adidas-nmd-human-race-trail-solar-pack', NULL, '2021-12-14 08:44:27'),
+(6, 'ADIDAS  NMD R1 JAPAN', 1, 'NMD R1 JAPAN.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, 'adidas-nmd-r1-japan', NULL, '2021-12-14 08:44:27'),
+(7, 'ADIDAS  NMD R1 PK', 1, 'NMD R1 PK.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 920000, 50, 1, 'adidas-nmd-r1-pk', NULL, '2021-12-14 08:44:27'),
+(8, 'ADIDAS  NMD R1 PK OG 2017 RELEASE', 1, 'NMD R1 PK OG 2017 RELEASE.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 1150000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(9, 'ADIDAS  NMD R1 W 1', 1, 'NMD R1 W 1.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 9200000, 50, 1, 'adidas-nmd-r1-w-1', NULL, '2021-12-14 08:44:27'),
+(10, 'ADIDAS  PW HU HOLI NMD MC TIE DYE', 1, 'PW HU HOLI NMD MC TIE DYE.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 11500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(11, 'ADIDAS PW HUMAN RACE NMD TR PHARRELL', 1, 'PW HUMAN RACE NMD TR PHARRELL.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 16100000, 48, 1, NULL, '2021-07-05 17:00:00', '2021-12-14 08:44:27'),
+(12, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACK', 1, 'PW SOLAR HU NMD INSPIRATION PACK.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 18400000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(13, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKS', 1, 'PW SOLAR HU NMD INSPIRATION PACKS.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 12650000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(14, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKSS', 1, 'PW SOLAR HU NMD INSPIRATION PACKSS.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 20700000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(15, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKS', 1, 'PW SOLAR HU NMD INSPIRATION PACKS.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 12650000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(16, 'ADIDAS PW SOLAR HU NMD INSPIRATION PACKSS', 1, 'PW SOLAR HU NMD INSPIRATION PACKSS.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 20700000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(17, 'ADIDAS PW TENNIS HU', 1, 'PW TENNIS HU.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(18, 'ADIDAS RISINGSYARXR1', 1, 'RISINGSYARXR1.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 690000, 50, 1, NULL, '2021-07-05 17:00:00', '2021-12-14 08:44:27'),
+(19, 'ADIDAS SUPERSTAR', 1, 'SUPERSTAR.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 16100000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(20, 'ADIDAS ULTRA BOOST', 1, 'ULTRA BOOST.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(21, 'ADIDAS ULTRABOOST WHITE MULTICOLOR', 1, 'ULTRABOOST WHITE MULTICOLOR.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 11500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(22, 'ADIDAS YEEZY BOOST 700 ANALOG', 1, 'YEEZY BOOST 700 ANALOG.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 103500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(23, 'ADIDAS YEEZY BOOST 700 INERTIA', 1, 'YEEZY BOOST 700 INERTIA.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(24, 'ADIDAS YEEZY BOOST 700 V2 GEODE', 1, 'YEEZY BOOST 700 V2 GEODE.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 13800000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(25, 'ADIDAS YEEZY BOOST 700 INERTIA', 1, 'YEEZY BOOST 700 INERTIA.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(26, 'ADIDAS YEEZY BOOST 700 V2 GEODE', 1, 'YEEZY BOOST 700 V2 GEODE.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 13800000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(27, 'ADIDAS YEEZY BOOST 700 WAVE RUNNER', 1, 'YEEZY BOOST 700 WAVE RUNNER.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 69000000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(28, 'ADIDAS YEEZY DESERT BOOT ROCK', 1, 'YEEZY DESERT BOOT ROCK.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 124430000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(29, 'ADIDAS YEEZY POWERPHASE CALABASAS GREY', 1, 'YEEZY POWERPHASE CALABASAS GREY.jpg', 'Tinh giản và hiện đại, những đôi giày NMD này kết hợp di sản đua xe của thập niên 80 với các dấu hiệu phong cách lấy từ các thiết bị đường mòn ngoài trời. Phần trên đan ôm chân cưỡi trên đế giữa có đệm đáp ứng.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 184000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(30, 'AIR JORDAN 1 HIGH OG TS SP TRAVIS SCOTT', 2, 'AIR JORDAN 1 HIGH OG TS SP TRAVIS SCOTT.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 20700000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(31, 'AIR JORDAN 1 LOW BLACK TOE', 2, 'AIR JORDAN 1 LOW BLACK TOE.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 24150000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(32, 'AIR JORDAN 1 RETRO HIGH BG', 2, 'AIR JORDAN 1 RETRO HIGH BG.jpg', 'Made with responsive cushioning, the Air Jordan 14 Retro SE Big Kids\' Shoe is ready for all-day comfort on and off the court.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 13800000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(33, 'AIR JORDAN 1 RETRO HIGH OG GS CRIMSON TINT', 2, 'AIR JORDAN 1 RETRO HIGH OG GS CRIMSON TINT.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan is a brand of basketball shoes, athletic, casual, and style clothing produced by Nike. ... The original Air Jordan sneakers were produced exclusively for Michael Jordan in early 1984, and released to the public in late 1984.', 10350000, 50, 1, 'air-jordan-1-retro-high-og-gs-crimson-tint', NULL, '2021-12-14 08:44:27'),
+(34, 'AIR JORDAN 1 RETRO HIGH OG TURBO GREEN', 2, 'AIR JORDAN 1 RETRO HIGH OG TURBO GREEN.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 10580000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(35, 'AIR JORDAN 2 RETRO HISTORY OF FLIGHT', 2, 'AIR JORDAN 2 RETRO HISTORY OF FLIGHT.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lò xo. I Thương hiệu đã xây dựng một mạng lưới vận hành mạnh mẽ tại các đô thị lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT is a phong cách giày thể thao của adidas.', 16100000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(36, 'AIR JORDAN 9 RETRO GS DB SAMPLE', 2, 'AIR JORDAN 9 RETRO GS DB SAMPLE.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 10350000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(37, 'AIR JORDAN 12 RETRO WINGS (NO LIMIT NUMBER)', 2, 'AIR JORDAN 12 RETRO WINGS (NO LIMIT NUMBER).jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 184000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(38, 'JORDAN TRUNNER SMASH', 2, 'JORDAN TRUNNER SMASH.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 138000000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(40, 'AIR JORDAN 13 PROMO RAY ALLEN PE', 2, 'AIR JORDAN 13 PROMO RAY ALLEN PE.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 57500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(41, 'AIR JORDAN 28 PE RAY ALLEN FINALS AWAY', 2, 'AIR JORDAN 28 PE RAY ALLEN FINALS AWAY.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 69000000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(42, 'AIR JORDAN AIR JORDAN 4 RETRO OG BRED 2021 BRED', 2, 'AIR JORDAN AIR JORDAN 4 RETRO OG BRED 2021 BRED.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 71760000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(43, 'JORDAN RARE AIR TURBO GREEN', 2, 'JORDAN RARE AIR TURBO GREEN.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 21850000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(44, 'JORDAN TRUNNER SMASH', 2, 'JORDAN TRUNNER SMASH.jpg', 'Được làm bằng đệm đáp ứng, Giày Air Jordan 14 Retro SE Big Kids \'sẵn sàng cho sự thoải mái cả ngày trong và ngoài sân.', 'Air Jordan là thương hiệu giày bóng rổ, quần áo thể thao, giản dị và phong cách do Nike sản xuất. ... Những đôi giày thể thao Air Jordan ban đầu được sản xuất dành riêng cho Michael Jordan vào đầu năm 1984, và ra mắt công chúng vào cuối năm 1984.', 115000000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(45, 'CONVERSE CHUCK 70 HIGH CHINESE NEW YEAR CHINESE NEW YEAR PATCHWORK', 4, 'CHUCK 70 HIGH CHINESE NEW YEAR CHINESE NEW YEAR PATCHWORK.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1127000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(46, 'CONVERSE CHUCK 70 HIGH TOP TOY', 4, 'CHUCK 70 HIGH TOP TOY.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1357000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(47, 'CONVERSE CHUCK 70 LOW MULTI HEART', 4, 'CHUCK 70 LOW MULTI HEART.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1127000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(48, 'CONVERSE CHUCK TAYLOR ALL STAR 70 OX BIG FISH THEORY', 4, 'CHUCK TAYLOR ALL STAR 70 OX BIG FISH THEORY.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1587000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(49, 'CONVERSE CHUCK TAYLOR ALL STAR HI TOP LEATHER', 4, 'CHUCK TAYLOR ALL STAR HI TOP LEATHER.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 2507000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(50, 'CONVERSE CHUCK TAYLOR ALL STAR HIGH', 4, 'CHUCK TAYLOR ALL STAR HIGH.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1357000, 45, 1, NULL, '2021-06-27 17:00:00', '2021-12-14 08:44:27'),
+(51, 'CONVERSE CHUCK TAYLOR ALL STAR LOW', 4, 'CHUCK TAYLOR ALL STAR LOW.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1127000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(52, 'CONVERSE CHUCK TAYLOR ALL STAR WATERPROOF HIGH', 4, 'CHUCK TAYLOR ALL STAR WATERPROOF HIGH.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(53, 'CONVERSE CHUCK TAYLOR NOT A CHUCK SAMPLE', 4, 'CHUCK TAYLOR NOT A CHUCK SAMPLE.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 6900000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(54, 'CONVERSE CHUCK TAYLOR NOT A CHUCK SAMPLES', 4, 'CHUCK TAYLOR NOT A CHUCK SAMPLES.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 11500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(55, 'CONVERSE CHUCK TAYLOR ALL-STAR 70S HI COMME DES GARCONS', 4, 'CONVERSE CHUCK TAYLOR ALL-STAR 70S HI COMME DES GARCONS.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(56, 'CONVERSE PRO LEATHER 76', 4, 'CONVERSE PRO LEATHER 76.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1127000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(57, 'CONVERSE CTAS HI', 4, 'CTAS HI.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 2300000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(58, 'CONVERSE FEAR OF GOD CHUCK 70 HI  ESSENTIALS', 4, 'FEAR OF GOD CHUCK 70 HI  ESSENTIALS.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 1817000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(59, 'CONVERSE ONE STAR OX', 4, 'ONE STAR OX.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 1357000, 50, 1, NULL, '2021-06-26 17:00:00', '2021-12-14 08:44:27'),
+(60, 'CONVERSE ONE STAR OX UNDEFEATED', 4, 'ONE STAR OX UNDEFEATED.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 2277000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(61, 'CONVERSE STAR PLAYER OX', 4, 'STAR PLAYER OX.jpg', 'Trông thật ngầu trong đôi giày thể thao mang tính biểu tượng này với phần đóng dễ dàng, dễ trượt.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi là \'Non-Skids\'. Được tạo bởi đế cao su và phần trên vải bạt và được thiết kế cho những người chơi bóng.', 23000000, 50, 1, NULL, '2021-06-26 17:00:00', '2021-12-14 08:44:27'),
+(62, 'BALENCIAGA SPEED TRAINER', 3, 'BALENCIAGA SPEED TRAINER.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 11500000, 46, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(63, 'BALENCIAGA SPEED TRAINERS', 3, 'BALENCIAGA SPEED TRAINERS.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Dominator of the luxury sneaker category in 2017 according to High Snobiety, Balenciaga\'s Triple S sneakers continue to reign supreme. Clocked by those in the know for their thrice stacked sole made from running, basketball and track shoe moulds, this pair continues to lead where dad shoes are concerned – and that\'s a good thing. Their functional and futuristic silhouette is the one to be seen in, whether or not you have kids in tow. Balenciaga leather and mesh trainersLace up fasteningRounded toe, oversized silhouete, bicolour laces, embossed logo on side back and under the sole, embossed \'Triple S\' on the tongue, complex sole, pull tab at heel, 10mm archLeather and textile upper, leather lining and rubber soleWipe with a soft clean cloth. Color: black', 9200000, 37, 1, NULL, NULL, '2021-12-14 08:45:09'),
+(64, 'BALENCIAGA TRIPLE S SPLIT', 3, 'BALENCIAGA TRIPLE S SPLIT.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Thống trị hạng mục giày thể thao sang trọng năm 2017 theo High Snobiety, giày thể thao Triple S của Balenciaga tiếp tục thống trị ngôi vị cao nhất. Được những người am hiểu đồng ý vì đế xếp chồng lên nhau gấp ba lần được làm từ khuôn giày chạy bộ, bóng rổ và điền kinh, đôi này tiếp tục dẫn đầu về những đôi giày bố được quan tâm - và đó là một điều tốt. Hình bóng chức năng và tương lai của chúng là hình dáng đáng để nhìn thấy, cho dù bạn có con nối dõi hay không. Giày thể thao da và lưới của Balenciaga và đế cao su Lau bằng vải sạch mềm. Màu đen', 16100000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(65, 'TRIPLE S PINK', 3, 'TRIPLE S PINK.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Thống trị hạng mục giày thể thao sang trọng năm 2017 theo High Snobiety, giày thể thao Triple S của Balenciaga tiếp tục thống trị ngôi vị cao nhất. Được những người am hiểu đồng ý vì đế xếp chồng lên nhau gấp ba lần được làm từ khuôn giày chạy bộ, bóng rổ và điền kinh, đôi này tiếp tục dẫn đầu về những đôi giày bố được quan tâm - và đó là một điều tốt. Hình bóng chức năng và tương lai của chúng là hình dáng đáng để nhìn thấy, cho dù bạn có con nối dõi hay không. Giày thể thao da và lưới của Balenciaga và đế cao su Lau bằng vải sạch mềm. Màu đen', 18400000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(66, 'TRIPLE S SUEDE WHITE', 3, 'TRIPLE S SUEDE WHITE.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Adidas hiện đang sản xuất một số giày chạy bộ và phong cách sống, bao gồm cả giày tăng lực và giày tập có lưỡi lò xo. I Thương hiệu đã xây dựng một mạng lưới vận động viên mạnh mẽ tại các thủ đô lớn của Châu Âu, chẳng hạn như Paris \'\' Boost Energy League \'. ... adidas EQT là một phong cách giày thể thao của adidas.', 12880000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(67, 'TRIPLE S TRAINER', 3, 'TRIPLE S TRAINER.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi \'Non-Skids\'. Giày được cấu tạo bởi đế cao su và phần trên bằng vải bạt và được thiết kế cho những người chơi bóng rổ.', 4600000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(68, 'TRIPLE S TRIPLE S', 3, 'TRIPLE S TRIPLE S.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Thống trị hạng mục giày thể thao sang trọng năm 2017 theo High Snobiety, giày thể thao Triple S của Balenciaga tiếp tục thống trị ngôi vị cao nhất. Được những người am hiểu đồng ý vì đế xếp chồng lên nhau gấp ba lần được làm từ khuôn giày chạy bộ, bóng rổ và điền kinh, đôi này tiếp tục dẫn đầu về những đôi giày bố được quan tâm - và đó là một điều tốt. Hình bóng chức năng và tương lai của chúng là hình dáng đáng để nhìn thấy, cho dù bạn có con nối dõi hay không. Giày thể thao da và lưới của Balenciaga và đế cao su Lau bằng vải sạch mềm. Màu đen', 137770000, 45, 1, NULL, '2021-07-06 17:00:00', '2021-12-14 08:44:27'),
+(69, 'TRIPLE SS', 3, 'TRIPLE SS.jpg', 'Đôi giày thể thao Triple S đáng thèm muốn của Balenciaga được tái tưởng tượng cho mùa giải mới với gam màu đỏ và xám. Được chế tạo với tấm lõi lưới được ốp bằng da nâu và da đen, chúng được chế tạo trên đế cao su xếp lớp có khớp nối đặc biệt của nhãn hiệu', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 6900000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(70, 'VANS AUTHENTIC 44 DX', 5, 'AUTHENTIC 44 DX.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 13800000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(71, 'VANS CLASSIC SLIP ON SKULL', 5, 'CLASSIC SLIP ON SKULL.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 1058000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(72, 'VANS COMFYCUSH OLD SKOOL DEFCON X LBT', 5, 'COMFYCUSH OLD SKOOL DEFCON X LBT.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 13800000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(73, 'VANS COMFYCUSH SK8-HI DEFCON X LBT', 5, 'COMFYCUSH SK8-HI DEFCON X LBT.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 11500000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(74, 'VANS DAVID BOWIE X SK8-HI ZIP TODDLER BOWIE', 5, 'COMFYCUSH SK8-HI DEFCON X LBT.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 6900000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(75, 'VANS LAMPIN CHALK PINK', 5, 'LAMPIN CHALK PINK.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Marquis Mills Converse thành lập Công ty giày cao su Converse vào năm 1908 tại Malden, Massachusetts. Vào năm 1917, công ty đã thiết kế tiền thân của giày All Star hiện đại được bán trên thị trường với tên gọi là \'Non-Skids\'. Được tạo bởi đế cao su và phần trên vải bạt và được thiết kế cho những người chơi bóng.', 2277000, 43, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(76, 'VANS OF FUL CAB LX', 5, 'OF FUL CAB LX.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 1288000, 50, 1, NULL, NULL, '2021-12-14 08:44:27'),
+(77, 'VANS OLD SCHOOL DAVID BOWIE', 5, 'OLD SCHOOL DAVID BOWIE.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 1288000, 40, 1, NULL, NULL, '2021-12-14 08:44:27');
 INSERT INTO `sanpham` (`id`, `tensp`, `maloai`, `hinhanh`, `motangan`, `motadai`, `gia`, `soluong`, `trangthai`, `slug`, `created_at`, `updated_at`) VALUES
-(78, 'VANS SK8 HI LOGO MIX', 5, 'SK8 HI LOGO MIX.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 40, 50, 1, NULL, '2021-06-27 17:00:00', '2021-07-07 18:26:03'),
-(79, 'VANS SK8-HI MICKEY & MINNIE', 5, 'SK8-HI MICKEY & MINNIE.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 40, 25, 1, 'vans-sk8-hi-mickey-minnie', '2021-07-07 17:00:00', '2021-08-09 15:00:04'),
-(80, 'VANS SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED', 5, 'SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED.jpg', 'The Classic VANS has a low profile, slip-on canvas upper with all-over checker print, elastic side accents, Vans flag label and Vans original Waffle Outsole.', 'The Old Skool Pro is a Vans classic upgraded for enhanced performance and built to last longer with reinforced abrasion areas and the extra support and cushioning demanded by the world\'s best professional skateboarders. Featuring suede uppers, UltraCush HD footbeds to keep the foot close to the board while providing the highest level of impact cushioning, and the Vans original waffle outsole for superior grip and control, the Old Skool Pro also includes Pro Vulc construction and Duracap reinforcement rubber underlays for unrivaled durability.', 300, 45, 1, 'vans-supreme-x-classic-slip-on-pro-diamond-plate-red', '2021-07-06 17:00:00', '2021-08-09 14:58:48');
+(78, 'VANS SK8 HI LOGO MIX', 5, 'SK8 HI LOGO MIX.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 920000, 50, 1, NULL, '2021-06-27 17:00:00', '2021-12-14 08:44:27'),
+(79, 'VANS SK8-HI MICKEY & MINNIE', 5, 'SK8-HI MICKEY & MINNIE.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 920000, 25, 1, 'vans-sk8-hi-mickey-minnie', '2021-07-07 17:00:00', '2021-12-14 08:44:27'),
+(80, 'VANS SUPREME X CLASSIC SLIP-ON PRO DIAMOND PLATE RED', 5, 'COMFYCUSH SK8-HI DEFCON X LBT.jpg', 'Classic VANS có kiểu dáng thấp, mặt trên bằng vải trượt với họa tiết kẻ caro, điểm nhấn bên hông đàn hồi, nhãn cờ Vans và đế ngoài Waffle nguyên bản của Vans.', 'Old Skool Pro là mẫu giày cổ điển của Vans được nâng cấp để nâng cao hiệu suất và được chế tạo để tồn tại lâu hơn với các khu vực mài mòn được gia cố và hỗ trợ và đệm thêm theo yêu cầu của những vận động viên trượt ván chuyên nghiệp tốt nhất thế giới. Với mũ da lộn, đệm chân UltraCush ™ HD để giữ bàn chân gần với bảng đồng thời cung cấp lớp đệm va đập ở mức cao nhất và đế ngoài bánh quế nguyên bản của Vans cho khả năng bám và kiểm soát tốt hơn, Old Skool Pro cũng bao gồm cấu trúc Pro Vulc và gia cố Duracap ™ lớp lót cao su cho độ bền vô song.', 6900000, 45, 1, 'vans-supreme-x-classic-slip-on-pro-diamond-plate-red', '2021-07-06 17:00:00', '2021-12-14 08:44:27');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slideshows`
+-- Cấu trúc bảng cho bảng `slideshows`
 --
 
 CREATE TABLE `slideshows` (
@@ -655,18 +653,18 @@ CREATE TABLE `slideshows` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `slideshows`
+-- Đang đổ dữ liệu cho bảng `slideshows`
 --
 
 INSERT INTO `slideshows` (`id`, `ten`, `hinh`, `stt`, `trangthai`) VALUES
 (1, 'slideshow1', '2021-03-08-10-03-34275311368.jpg', 1, 1),
 (2, 'slideshow2', '2021-04-29-01-04-40131304691.jpg', 2, 1),
-(3, 'slideshow3', '2021-04-29-01-04-426862193.jpg', 3, 1);
+(3, 'slideshow3', '2021-05-25-01-05-521372243578.jpg', 3, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `thanhvien`
+-- Cấu trúc bảng cho bảng `thanhvien`
 --
 
 CREATE TABLE `thanhvien` (
@@ -684,21 +682,22 @@ CREATE TABLE `thanhvien` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `thanhvien`
+-- Đang đổ dữ liệu cho bảng `thanhvien`
 --
 
 INSERT INTO `thanhvien` (`id`, `name`, `address`, `email`, `password`, `phone`, `status`, `level`, `avatar`, `created_at`, `updated_at`) VALUES
-(1, 'nguyễn tấn lợi', 'VC-DN', 'nguyenloi211098@gmail.com', '81dc9bdb52d04dc20036dbd8313ed055', '0764656477', 1, 2, NULL, NULL, NULL),
-(3, 'Lợi Lợi', 'VC-DN', 'nguyenloi211098@gmail.com', '7a56e1b89d87981a30a0368f5e96d109', '0764656477', 1, 1, NULL, NULL, '2021-06-19 14:45:16'),
-(4, 'Nhớ Lắm', 'Số 8 , nguyễn trung trực , quận bình thạnh , TPHCM', 'vungockien1997.nm@gmail.com', '6e254621dd432286d49e912c9e7f1c8d', '0384351088', 1, 1, NULL, NULL, NULL),
-(5, 'ThanhRain', 'Chơn Thành , Bình Phước', 'admin@gmail.com', '0192023a7bbd73250516f069df18b500', '0962011240', 1, 2, NULL, NULL, '2021-10-20 09:27:19'),
-(7, 'Phan Xuân Tuấn', 'VC-DN', 'nguyenloi21109855@gmail.com', 'ba248c985ace94863880921d8900c53f', '0764656477', 1, 1, NULL, NULL, NULL),
-(9, 'ngọc kiên', 'VĨnh Cữu', 'kien@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', '0163648675', 1, 1, NULL, NULL, NULL);
+(5, 'Phạm Anh Tuân', 'Quận 10, TP.HCM', 'patuan0810@gmail.com', '0192023a7bbd73250516f069df18b500', '0914046121', 1, 2, NULL, NULL, '2021-12-13 08:42:40'),
+(10, 'Lê Duy Khanh', '170/05 Hòa Hưng, Phường 13, Quận 10, TP. HCM', 'leduykhanhqn123@gmail.com', '0192023a7bbd73250516f069df18b500', '0868730424', 1, 2, NULL, NULL, NULL),
+(11, 'Hồ Văn Diện', 'Quận 10, TP.HCM', 'anhpro6a5@gmail.com', '0192023a7bbd73250516f069df18b500', '0375840917', 1, 2, NULL, NULL, NULL),
+(12, 'Nguyễn Minh Thắng', 'Quận 10, TP.HCM', 'thangdeptrai994@gmail.com', '0192023a7bbd73250516f069df18b500', '0349696808', 1, 2, NULL, NULL, NULL),
+(13, 'Trần Quang Minh', 'Quận 10, TP.HCM', '3121minh@gmail.com', '0192023a7bbd73250516f069df18b500', '0946347509', 1, 2, NULL, NULL, NULL),
+(14, 'Chu Ngọc Toàn', 'Quận 10, TP.HCM', 'codertoan@gmail.com', '0192023a7bbd73250516f069df18b500', '0332756244', 1, 2, NULL, NULL, NULL),
+(15, 'Nguyễn Thanh Giang', 'Quận 10, TP.HCM', 'thanhgiang.user@gmail.com', '0192023a7bbd73250516f069df18b500', '0342601307', 1, 2, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Cấu trúc bảng cho bảng `users`
 --
 
 CREATE TABLE `users` (
@@ -711,151 +710,151 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `users`
+-- Đang đổ dữ liệu cho bảng `users`
 --
 
 INSERT INTO `users` (`id`, `password`, `name`, `email`, `status`, `reset_token`) VALUES
-(45, 'bf17a60e713a2340f87a5317a19518b3', 'Tống Văn Thanh', 'thanhchonthanh@gmail.com', 1, '4c6bb82f6780f5308baf333f9c327cbc');
+(60, '052b92f13b8ccd7e3fb2211613dcce15', 'patuan0810', 'patuan0810@gmail.com', 1, NULL);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `baiviet`
+-- Chỉ mục cho bảng `baiviet`
 --
 ALTER TABLE `baiviet`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `cthoadon`
+-- Chỉ mục cho bảng `cthoadon`
 --
 ALTER TABLE `cthoadon`
   ADD PRIMARY KEY (`id`,`ma_HD`,`ma_SP`);
 
 --
--- Indexes for table `default_sorting`
+-- Chỉ mục cho bảng `default_sorting`
 --
 ALTER TABLE `default_sorting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `dmbaiviet`
+-- Chỉ mục cho bảng `dmbaiviet`
 --
 ALTER TABLE `dmbaiviet`
   ADD PRIMARY KEY (`id_dm`);
 
 --
--- Indexes for table `hinhanh`
+-- Chỉ mục cho bảng `hinhanh`
 --
 ALTER TABLE `hinhanh`
   ADD PRIMARY KEY (`hinhID`);
 
 --
--- Indexes for table `hoadon`
+-- Chỉ mục cho bảng `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`maHD`);
 
 --
--- Indexes for table `loaisanpham`
+-- Chỉ mục cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   ADD PRIMARY KEY (`id_loai`);
 
 --
--- Indexes for table `sanpham`
+-- Chỉ mục cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `slideshows`
+-- Chỉ mục cho bảng `slideshows`
 --
 ALTER TABLE `slideshows`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `thanhvien`
+-- Chỉ mục cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `users`
+-- Chỉ mục cho bảng `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `baiviet`
+-- AUTO_INCREMENT cho bảng `baiviet`
 --
 ALTER TABLE `baiviet`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT for table `cthoadon`
+-- AUTO_INCREMENT cho bảng `cthoadon`
 --
 ALTER TABLE `cthoadon`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
--- AUTO_INCREMENT for table `default_sorting`
+-- AUTO_INCREMENT cho bảng `default_sorting`
 --
 ALTER TABLE `default_sorting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `dmbaiviet`
+-- AUTO_INCREMENT cho bảng `dmbaiviet`
 --
 ALTER TABLE `dmbaiviet`
   MODIFY `id_dm` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `hinhanh`
+-- AUTO_INCREMENT cho bảng `hinhanh`
 --
 ALTER TABLE `hinhanh`
   MODIFY `hinhID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=330;
 
 --
--- AUTO_INCREMENT for table `hoadon`
+-- AUTO_INCREMENT cho bảng `hoadon`
 --
 ALTER TABLE `hoadon`
   MODIFY `maHD` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
--- AUTO_INCREMENT for table `loaisanpham`
+-- AUTO_INCREMENT cho bảng `loaisanpham`
 --
 ALTER TABLE `loaisanpham`
   MODIFY `id_loai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
--- AUTO_INCREMENT for table `sanpham`
+-- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
--- AUTO_INCREMENT for table `slideshows`
+-- AUTO_INCREMENT cho bảng `slideshows`
 --
 ALTER TABLE `slideshows`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `thanhvien`
+-- AUTO_INCREMENT cho bảng `thanhvien`
 --
 ALTER TABLE `thanhvien`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

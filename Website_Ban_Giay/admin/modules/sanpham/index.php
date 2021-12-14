@@ -123,7 +123,7 @@ if(isset($product['page']))
 						</td>
 						<td>
 							<ul>
-								<li style="list-style: none;">Giá : $<?php echo $item['gia'] ?></li>
+								<li style="list-style: none;">Giá : <?php echo number_format($item['gia'],0,",",".") ?><sup style="text-transform:none">đ</sup></li>
 								<li style="list-style: none;">Số lượng : <?php echo $item['soluong'] ?> </li>
 							</ul>
 						</td>

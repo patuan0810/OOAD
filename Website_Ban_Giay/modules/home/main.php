@@ -211,7 +211,7 @@
                             <?php echo $featured_products['tensp']?>
                             </a>
                             <span class="block2-price m-text6 p-r-5">
-                            $<?php echo $featured_products['gia']?>
+                            <?php echo number_format($featured_products['gia'],0,",",".")  ?><sup style="text-transform:none">đ</sup>
                             </span>
                         </div>
                     </div>

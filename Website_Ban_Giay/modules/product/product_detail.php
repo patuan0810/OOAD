@@ -63,7 +63,7 @@
                 <?php echo $Listproductdetail['tensp'] ?>
             </h4>
             <span class="m-text17">
-            $<?php echo $Listproductdetail['gia'] ?>
+            <?php echo number_format($Listproductdetail['gia'],0,",",".") ?><sup style="text-transform:none">đ</sup>
             </span>
             <p class="s-text8 p-t-10">
                 <?php echo $Listproductdetail['motangan'] ?>
@@ -175,13 +175,13 @@
                 }
                 ?>
             <div class="p-b-45">
-                <span class="s-text8 m-r-35">Available: <?php echo $Listproductdetail['soluong'];?> products</span> 
-                <span class="s-text8">Categories: <?php echo $Listproductdetail['loaisanpham'] ?></span>
+                <span class="s-text8 m-r-35">Có Sẵn: <?php echo $Listproductdetail['soluong'];?> sản phẩm</span> 
+                <span class="s-text8">Danh mục: <?php echo $Listproductdetail['loaisanpham'] ?></span>
             </div>
             <!--  -->
             <div class="wrap-dropdown-content bo6 p-t-15 p-b-14 active-dropdown-content">
                 <h5 class="js-toggle-dropdown-content flex-sb-m cs-pointer m-text19 color0-hov trans-0-4">
-                    Description
+                    Mô tả chi tiết
                     <i class="down-mark fs-12 color1 fa fa-minus dis-none" aria-hidden="true"></i>
                     <i class="up-mark fs-12 color1 fa fa-plus" aria-hidden="true"></i>
                 </h5>
@@ -226,7 +226,7 @@
     <div class="container">
         <div class="sec-title p-b-60">
             <h3 class="m-text5 t-center">
-                Related Products
+                Sản Phẩm Liên Quan
             </h3>
         </div>
         <?php
@@ -294,7 +294,7 @@
                             <?php echo $list['tensp'] ?>
                             </a>
                             <span class="block2-price m-text6 p-r-5">
-                            $<?php echo $list['gia'] ?>
+                            <?php echo number_format($list['gia'],0,",",".") ?><sup style="text-transform:none">đ</sup>
                             </span>
                         </div>
                     </div>
