@@ -176,7 +176,6 @@ require_once __DIR__. "/autoload/autoload.php";
 								{
 									echo number_format($rows['tongtien'],0,",",".");
 								}
-								
 						} ?><sup style="text-transform:none">đ</sup></div>
 						<div> Hóa Đơn Theo Ngày</div>
 					</div>
