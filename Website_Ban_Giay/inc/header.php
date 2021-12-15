@@ -73,7 +73,7 @@
             <div class="wrap_header">
                 <!-- Logo -->
                 <a href="index.php" class="logo">
-                    <img src="imgs/logo/logo.png" style=" max-height: 65px;" alt="IMG-LOGO">
+                    <img src="imgs/logo/log.png" style=" max-height: 65px;" alt="IMG-LOGO">
                 </a>
                 <!-- Menu -->
                 <div class="wrap_menu">

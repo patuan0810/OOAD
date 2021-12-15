@@ -14,7 +14,7 @@
 			<div class="row">
 				<div class="col-md-4 p-b-30">
 					<div class="hov-img-zoom">
-						<img src="imgs/logo/logo.png">
+						<img src="imgs/sneakers_shoes_texture_168868_800x600.jpg">
 					</div>
 				</div>
 
