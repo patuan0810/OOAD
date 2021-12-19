@@ -99,10 +99,6 @@
                         <a href="<?php echo modules("danhmucbaiviet")?>"> <i class="fa fa-book"> </i> Danh mục  Bài viết</a>
                     </li>
 
-                    <li class="<?php echo isset($open) && $open == 'baiviet' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("baiviet")?>"> <i class="fa fa-bookmark"> </i>    Bài viết</a>
-                    </li>
-
                     <li class="<?php echo isset($open) && $open == 'thanhvien' ? 'active' : '' ?>">
                         <a href="<?php echo modules("thanhvien")?>"> <i class="fa fa-user"> </i>  Admin</a>
                     </li>
