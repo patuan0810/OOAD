@@ -161,9 +161,9 @@
                 <?php
                     if(empty($list_buy))
                     {
-                        echo "<h1 style='text-align: center;'>Your Cart is empty</h1><b>You have no items in your shopping cart.
+                        echo "<h1 style='text-align: center;'>Giỏ hàng của bạn chưa có sản phẩm nào</h1><b>Bạn chưa thêm sản phẩm nào vào giỏ hàng.
                     
-                    <a href='?mod=product&act=main' >Click here</a> to continue shopping.</b>";
+                    <a href='?mod=product&act=main' >Nhấn vào đây</a> để tiếp tục mua sắm</b>";
                     
                     }
                     ?>

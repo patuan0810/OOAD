@@ -171,7 +171,12 @@
                 <!-- <button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
                     Thanh Toán
                     </button> -->
-                <input type="submit" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" style="cursor: pointer" value="Đặt Hàng">
+                <input type="submit" onclick="click1()" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4" style="cursor: pointer" value="Đặt Hàng">
+                <script>
+                    function click1(){
+                    alert("Đặt hàng thành công!");
+                }
+                </script>
                 </div>
             </div>
             <div class="col-md-6 p-b-30">
@@ -198,6 +203,14 @@
             </div>
             <div class="bo4 of-hidden size15 m-b-20">
             <input class="sizefull s-text7 p-l-22 p-r-22" type="text" pattern="[0-9]{10}" name="telephone" placeholder="Số Điện Thoại" class="form-control"  required>
+            </div>
+            <div> 
+                <h4 style="margin-bottom: 10px;font-size" > Chọn phương thức thanh toán</h4>
+                <ul>
+                   <li> <input name="gender" type="radio" value="Nam" />Thanh toán khi nhận hàng</li>
+                   <li>  <input name="gender" type="radio" value="Nữ" />Ví momo</li>
+                   <li> <input name="gender" type="radio" value="Khác" />Thẻ tín dụng/ATM</li>
+                 </ul>
             </div>
             </form>
             <?php

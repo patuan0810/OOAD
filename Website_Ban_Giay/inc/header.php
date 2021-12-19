@@ -63,12 +63,6 @@
                 <span class="topbar-child1">
                     Miễn Phí Ship Cho Mọi Đơn Hàng
                 </span>
-                <div class="topbar-child2">
-                    <span class="topbar-email">
-                        <a href="mailto:nguyenloi211098@gmail.com">patuan0810@gmail.com</a>
-                    </span>
-                    
-                </div>
             </div>
             <div class="wrap_header">
                 <!-- Logo -->
