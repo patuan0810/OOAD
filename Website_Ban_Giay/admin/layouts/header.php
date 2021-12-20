@@ -95,10 +95,6 @@
                         <a href="<?php echo modules("hinhanhsanpham")?>"> <i class="fa fa-picture-o"> </i> Hình ảnh  Sản phẩm</a>
                     </li>
 
-                    <li class="<?php echo isset($open) && $open == 'danhmucbaiviet' ? 'active' : '' ?>">
-                        <a href="<?php echo modules("danhmucbaiviet")?>"> <i class="fa fa-book"> </i> Danh mục  Bài viết</a>
-                    </li>
-
                     <li class="<?php echo isset($open) && $open == 'thanhvien' ? 'active' : '' ?>">
                         <a href="<?php echo modules("thanhvien")?>"> <i class="fa fa-user"> </i>  Admin</a>
                     </li>

@@ -55,36 +55,6 @@ require_once __DIR__. "/autoload/autoload.php";
 			</a>
 		</div>
 	</div>
-	<div class="col-lg-3 col-md-6">
-		<div class="panel panel-green">
-			<div class="panel-heading">
-				<div class="row">
-					<div class="col-xs-3">
-						<i class="fa fa-tasks fa-5x"></i>
-					</div>
-					<div class="col-xs-9 text-right">
-						<div class="huge"><?php require '../db/connect.php';
-						$sql = "SELECT COUNT(*)as tongbaiviet FROM `baiviet` WHERE 1";
-						$result = $conn->query($sql);
-						if($result->num_rows > 0)
-							while($rows = $result->fetch_assoc()){	
-								echo $rows['tongbaiviet'];
-						} ?></div>
-						<div>Tổng bài viết</div>
-
-					</div>
-				</div>
-			</div>
-			<a href="<?php echo base_url() ?>admin/modules/baiviet/index.php">
-				<div class="panel-footer">
-					<span class="pull-left">Xem Chi Tiết</span>
-					<span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-					<div class="clearfix"></div>
-				</div>
-			</a>
-		</div>
-	</div>
-
 
 	<div class="col-lg-3 col-md-6">
 		<div class="panel panel-yellow">

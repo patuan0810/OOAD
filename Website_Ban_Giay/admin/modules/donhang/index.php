@@ -1,37 +1,146 @@
 
-<?php 
-		$open = "donhang";
-		require_once __DIR__. "/../../autoload/autoload.php";
 
 
-		
 
-   
 
-							
-		if(isset($_GET['page']))
-		{
-			$p = $_GET['page'];
-		}
-		else
-		{
-			$p = 1;
-		}
 
-		// $sql = "SELECT cthoadon.ma_HD, hoadon.fullname, hoadon.telephone, sanpham.tensp as tensp, cthoadon.soluong as sl, cthoadon.dongia as dongia , cthoadon.status ,cthoadon.id  from cthoadon, hoadon, sanpham WHERE cthoadon.ma_HD = hoadon.maHD and sanpham.id = cthoadon.ma_SP and cthoadon.status >= 1";
-		$sql = "SELECT cthoadon.ma_HD, users.name AS fullname,users.email AS emailaddress,hoadon.address,hoadon.ngaylap, hoadon.telephone, cthoadon.status ,cthoadon.id from cthoadon, hoadon, users WHERE cthoadon.ma_HD = hoadon.maHD and users.id = hoadon.id_user and hoadon.status = 1 GROUP by hoadon.maHD";
-		$cthoadon = $db->fetchJone_hoadon('hoadon',$sql,$p,10,true);
 
-		if(isset($cthoadon['page']))
-		{
-			$sotrang = $cthoadon['page'];
-			unset($cthoadon['page']);
-		}
 
- ?>
 
-<?php require_once __DIR__. "/../../layouts/header.php";?>
-	<!-- Page Heading  NOI DUNG-->
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Trang Admin</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="http://localhost/Website_Ban_Giay/public/admin/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="http://localhost/Website_Ban_Giay/public/admin/css/sb-admin.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="http://localhost/Website_Ban_Giay/public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+
+    <script src="http://localhost/Website_Ban_Giay/admin/modules/baiviet/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.php">Xin chào Phạm Anh Tuân</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Phạm Anh Tuân <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <sqan onclick="logout()" style="cursor: pointer;    padding-left: 21px;"><i class="fa fa-fw fa-power-off"></i> Log Out</sqan>
+                        </li>
+                          <script>
+                                                function logout()
+                                                {
+                                                    if(confirm("Are you sure?")==true)
+                                                    {
+                                                        window.location="/Website_Ban_Giay/admin/thoat.php";
+                                                    }
+                                                    else
+                                                    {
+
+                                                    }
+                                                }
+                                            </script>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="http://localhost/Website_Ban_Giay/admin"><i class="fa fa-fw fa-dashboard"></i> Bảng điều khiển</a>
+                    </li>
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/loaisanpham"><i class="fa fa-list"></i>  Danh mục sản phẩm</a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/sanpham"> <i class="fa fa-database"> </i>  Sản phẩm</a>
+                    </li>
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/hinhanhsanpham"> <i class="fa fa-picture-o"> </i> Hình ảnh  Sản phẩm</a>
+                    </li>
+					
+                    </li>
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/thanhvien"> <i class="fa fa-user"> </i>  Admin</a>
+                    </li>
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/user"> <i class="fa fa-users"> </i>  Người dùng</a>
+                    </li>
+
+
+                    <li class="active">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/donhang"> <i class="fa fa-shopping-cart"> </i>  Quản lý Hóa Đơn</a>
+                    </li>
+
+
+                    <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/danhsachhoadon"> <i class="fa fa-calendar-o"> </i>  Danh sách đơn hàng</a>
+                    </li>
+
+                     <li class="">
+                        <a href="http://localhost/Website_Ban_Giay/admin/modules/banner"> <i class="fa fa-list-alt"> </i>  Danh sách slider</a>
+                    </li>
+
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+        <div id="page-wrapper">
+            <div class="container-fluid">	<!-- Page Heading  NOI DUNG-->
 	<div class="row">
 	    <div class="col-lg-12">
 	        <h1 class="page-header">
@@ -46,18 +155,8 @@
 	            </li>
 	        </ol>
 	        <div class="clearfix"></div>
-	        <?php if(isset($_SESSION['success'])) : ?>
-	        	<div class="alert alert-success">
-                     <?php echo $_SESSION['success']; unset($_SESSION['success']) ?>
-                </div>
-	        <?php endif ; ?>
-
-	        <?php if(isset($_SESSION['error'])) : ?>
-	        	<div class="alert alert-danger">
-	                 <?php echo $_SESSION['error']; unset($_SESSION['error']) ?>
-	            </div>
-	        <?php endif ; ?>
-	    </div>
+	        
+	        	    </div>
 	</div>
 	
 
@@ -81,37 +180,86 @@
 		        </thead>
 
 		        <tbody>
-		        	<?php $stt= 1; foreach ($cthoadon as $item ): ?>
-			        	<tr>
-			                <td><?php echo $stt ?></td>
-			                <td><?php echo $item["ma_HD"] ?></td>
-			                <td><?php echo $item["fullname"] ?></td>
-			                <td><?php echo $item["emailaddress"] ?></td>
-			                <td><?php echo $item["address"] ?></td>
-			                <td><?php echo $item["telephone"] ?></td>
-			                 <td><?php echo date("d-m-Y", strtotime($item["ngaylap"])) ?></td>
+		        				        	<tr>
+			                <td>100</td>
+			                <td>100</td>
+			                <td>Phạm Anh Tuân</td>
+			                <td>patuan0810@gmail.com</td>
+			                <td>TP.HCM</td>
+			                <td>0914046121</td>
+			                 <td>20-12-2021</td>
 			                <td>
-			                	<?php if ($item['status'] == 2): ?>
-			                		<a href="status.php?id=<?php echo $item['ma_HD'] ?>" class="btn btn-xs btn-danger"> Chưa xử lý</a>
-			                	<?php else : ?>
-			                		<a href="status.php?id=<?php echo $item['ma_HD'] ?>" class="btn btn-xs btn-info"> Đã xử lý</a>
-			                	<?php endif ?>
-			                	<!-- <a href="status.php?id=<?php echo $item['id'] ?>" class="btn btn-xs <?php echo $item['status'] == 0 ? 'btn-danger' : 'btn-info' ?>"> <?php echo $item['status'] == 0 ? 'chưa xử lý'  : 'đã xử lý' ?></a> -->
+			                				                		<a href="status.php?id=94" class="btn btn-xs btn-info"> Đã xử lý</a>
+			                				                	<!-- <a href="status.php?id=125" class="btn btn-xs btn-info"> đã xử lý</a> -->
 			                </td>
-			                <td><?php if ($item['status'] == 2): ?>
-			                	
-			                	<a class="btn btn-xs btn-danger" href="remove.php?id=<?php echo $item['ma_HD'] ?>"><i class="fa fa-times"></i> Hủy</a>
-			                	<?php else : ?>
-			                	<a class="btn btn-xs btn-danger" href="delete.php?id=<?php echo $item['ma_HD'] ?>"><i class="fa fa-times"></i> Xóa</a>
-			                	<?php endif ?>
-			                </td>
+			                <td>			                	<a class="btn btn-xs btn-danger" href="delete.php?id=94"><i class="fa fa-times"></i> Xóa</a>
+			                				                </td>
 
 			                <td>
-			                	<a class="btn btn-xs btn-warning" href="detail.php?ma_HD=<?php echo $item['ma_HD'] ?>"><i class="fa fa-ellipsis-v"> Chi Tiết</i></a>
+			                	<a class="btn btn-xs btn-warning" href="detail.php?ma_HD=94"><i class="fa fa-ellipsis-v"> Chi Tiết</i></a>
 			                </td>
 			            </tr>
-		        	<?php $stt++ ; endforeach ?>
-		           
+		        				        	<tr>
+			                <td>1</td>
+			                <td>94</td>
+			                <td>Lê Duy Khanh</td>
+			                <td>leduykhanhqn@gmail.com</td>
+			                <td>TP.HCM</td>
+			                <td>0868730424</td>
+			                 <td>21-12-2021</td>
+			                <td>
+			                				                		<a href="status.php?id=100" class="btn btn-xs btn-info"> Đã xử lý</a>
+			                				                	<!-- <a href="status.php?id=129" class="btn btn-xs btn-info"> đã xử lý</a> -->
+			                </td>
+			                <td>			                	<a class="btn btn-xs btn-danger" href="delete.php?id=100"><i class="fa fa-times"></i> Xóa</a>
+			                				                </td>
+
+			                <td>
+			                	<a class="btn btn-xs btn-warning" href="detail.php?ma_HD=100"><i class="fa fa-ellipsis-v"> Chi Tiết</i></a>
+			                </td>
+			            </tr>
+		        				        	<tr>
+			                <td>1</td>
+			                <td>83</td>
+			                <td>Trần Quang Minh</td>
+			                <td>3121minh@gmail.com</td>
+			                <td>TP.HCM</td>
+			                <td>0946347509</td>
+			                 <td>21-12-2021</td>
+			                <td>
+			                				                		<a href="status.php?id=102" class="btn btn-xs btn-danger"> Chưa xử lý</a>
+			                				                	<!-- <a href="status.php?id=132" class="btn btn-xs btn-info"> đã xử lý</a> -->
+			                </td>
+			                <td>			                	
+			                	<a class="btn btn-xs btn-danger" href="remove.php?id=102"><i class="fa fa-times"></i> Hủy</a>
+			                				                </td>
+
+			                <td>
+			                	<a class="btn btn-xs btn-warning" href="detail.php?ma_HD=102"><i class="fa fa-ellipsis-v"> Chi Tiết</i></a>
+			                </td>
+			            </tr>
+						</tr>
+		        				        	<tr>
+			                <td>1</td>
+			                <td>98</td>
+			                <td>Hồ Văn Diện</td>
+			                <td>anhpro6a5@gmail.com</td>
+			                <td>TP.HCM</td>
+			                <td>0375840917</td>
+			                 <td>21-12-2021</td>
+			                <td>
+			                				                		<a href="status.php?id=102" class="btn btn-xs btn-danger"> Chưa xử lý</a>
+			                				                	<!-- <a href="status.php?id=132" class="btn btn-xs btn-info"> đã xử lý</a> -->
+			                </td>
+			                <td>			                	
+			                	<a class="btn btn-xs btn-danger" href="remove.php?id=102"><i class="fa fa-times"></i> Hủy</a>
+			                				                </td>
+
+			                <td>
+			                	<a class="btn btn-xs btn-warning" href="detail.php?ma_HD=102"><i class="fa fa-ellipsis-v"> Chi Tiết</i></a>
+			                </td>
+			            </tr>
+		        			           
 		        </tbody>
 		    </table>
 		    <div class="pull-right">
@@ -123,22 +271,10 @@
 				        <span aria-hidden="true">&laquo;</span>
 				      </a>
 				    </li>
-			    <?php for($i = 1 ;$i <= $sotrang; $i++) : ?>
-			    	<?php
-			    		 if(isset($_GET['page']))
-			    		 {
-			    		 	$p = $_GET['page'];
-			    		 }
-			    		 else
-			    		 {
-			    		 	$p = 1;
-			    		 }
-			    	?>
-			    		<li class="<?php echo ($i == $p) ? 'active' : '' ?>">
-			    			<a href="?page=<?php echo $i ; ?>"><?php echo $i; ?></a>
+			    			    				    		<li class="active">
+			    			<a href="?page=1">1</a>
 			    		</li>
-				<?php endfor; ?>
-			    <li class="page-item">
+							    <li class="page-item">
 			      <a class="page-link" href="#" aria-label="Next">
 			        <span aria-hidden="true">&raquo;</span>
 			      </a>
@@ -150,4 +286,15 @@
 		</div>
 	</div>
 	<!-- /.row -->
-<?php require_once __DIR__. "/../../layouts/footer.php";?>
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- /#page-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+        <!-- jQuery -->
+        <script src="http://localhost/Website_Ban_Giay/public/admin/js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://localhost/Website_Ban_Giay/public/admin/js/bootstrap.min.js"></script>
+    </body>
+</html>

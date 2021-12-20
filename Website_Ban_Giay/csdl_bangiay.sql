@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 14, 2021 lúc 12:10 PM
+-- Thời gian đã tạo: Th12 20, 2021 lúc 09:20 AM
 -- Phiên bản máy phục vụ: 10.4.22-MariaDB
 -- Phiên bản PHP: 8.0.13
 
@@ -106,33 +106,6 @@ INSERT INTO `default_sorting` (`id`, `ten`, `status`) VALUES
 (1, 'Sản Phẩm Mới', 1),
 (2, 'Giá: thấp đến cao', 1),
 (3, 'Giá: cao đến thấp', 1);
-
--- --------------------------------------------------------
-
---
--- Cấu trúc bảng cho bảng `dmbaiviet`
---
-
-CREATE TABLE `dmbaiviet` (
-  `id_dm` int(10) NOT NULL,
-  `tendm` varchar(255) NOT NULL,
-  `slug` varchar(100) DEFAULT NULL,
-  `trangthai` tinyint(4) DEFAULT 1,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Đang đổ dữ liệu cho bảng `dmbaiviet`
---
-
-INSERT INTO `dmbaiviet` (`id_dm`, `tendm`, `slug`, `trangthai`, `created_at`, `updated_at`) VALUES
-(1, 'Review', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:47'),
-(2, 'Trademark', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:47'),
-(3, 'Tips', NULL, 1, '2021-06-22 01:12:12', '2021-12-14 08:30:48'),
-(4, 'Entertainment', NULL, 1, '2021-06-22 01:12:12', '2021-06-29 15:54:08'),
-(6, 'Fashions', NULL, 1, '2021-06-22 01:12:12', '2021-06-30 08:11:37'),
-(7, 'Trẻ trung ', 'tre-trung', 1, '2021-06-22 01:33:20', '2021-12-12 11:14:09');
 
 -- --------------------------------------------------------
 
@@ -495,10 +468,10 @@ CREATE TABLE `hoadon` (
 --
 
 INSERT INTO `hoadon` (`maHD`, `company`, `address`, `city`, `province`, `country`, `telephone`, `ngaylap`, `status`, `id_user`) VALUES
-(81, 'TNHH Hải lu', 'Chơn Thành', 'Bình Phước', 'Hồ Chí Minh', 'Việt Nam', '0962011240', '2021-07-07', 0, 45),
-(83, 'TNHH Hải lu', 'Chơn Thành', 'Bình Phước', 'Hồ Chí Minh', 'Việt Nam', '0962011240', '2021-07-07', 0, 45),
-(94, 'TNHH Hải lu', 'Chơn Thành', 'Bình Phước', 'Hồ Chí Minh', 'Việt Nam', '0962011240', '2021-07-08', 1, 45),
-(98, 'TNHH Hải lu', 'Chơn Thành', 'Bình Phước', 'Hồ Chí Minh', 'Việt Nam', '0962011240', '2021-07-08', 1, 57),
+(81, 'DTK', 'Phường 13', 'Quận 10', 'Hồ Chí Minh', 'Việt Nam', '0962011240', '2019-07-07', 0, 45),
+(83, 'DTK', 'Phường 13', 'Quận 10', 'Hồ Chí Minh', 'Việt Nam', '0914046121', '2021-07-07', 0, 45),
+(94, 'DTK', 'Phường 13', 'Quận 10', 'Hồ Chí Minh', 'Việt Nam', '0914046121', '2021-07-07', 1, 45),
+(98, 'DTK', 'Phường 13', 'Quận 10', 'Hồ Chí Minh', 'Việt Nam', '0914046121', '2021-07-07', 1, 57),
 (100, 'asdasd', 'asdsad', 'asdasd', 'asdasd', 'asdasd', '0972545449', '2021-07-19', 1, 45),
 (102, 'asdasd', '187 nguyễn xí', 'hcm', 'binh thanh', 'nguyen xi', '0972545449', '2021-07-19', 1, 45),
 (103, 'asdasd', '187 nguyễn xí', 'hcm', 'binh thanh', 'nguyen xi', '0972545449', '2021-07-19', 1, 58),
@@ -739,12 +712,6 @@ ALTER TABLE `default_sorting`
   ADD PRIMARY KEY (`id`);
 
 --
--- Chỉ mục cho bảng `dmbaiviet`
---
-ALTER TABLE `dmbaiviet`
-  ADD PRIMARY KEY (`id_dm`);
-
---
 -- Chỉ mục cho bảng `hinhanh`
 --
 ALTER TABLE `hinhanh`
@@ -807,12 +774,6 @@ ALTER TABLE `cthoadon`
 --
 ALTER TABLE `default_sorting`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT cho bảng `dmbaiviet`
---
-ALTER TABLE `dmbaiviet`
-  MODIFY `id_dm` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT cho bảng `hinhanh`
